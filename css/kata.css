@@ -1,0 +1,13 @@
+.event_name {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
+.event_logo {}
+
+.event_logo img {
+    height: 20%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}

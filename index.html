@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Judo Kata Tournament Manager Software</title>
+    <link rel="stylesheet" href="/css/almond.css" />
+    <link rel="stylesheet" href="/css/kata.css" />
+    <link rel="icon" type="image/x-icon" href="<%= config->{event_logo} %>" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="event_name">
+        <hgroup>
+          <h1>Judo Kata Tournament Manager Software</h1>
+        </hgroup>
+      </div>
+      <div class="event_logo">
+        <img src="" />
+      </div>
+    </header>
+
+    <main class="content">
+      <section>
+        <p>
+          This site to home for a Judo Kata Tournament Software solution to help
+          you organise and run Judo Kata competitions.
+        </p>
+        <hr />
+        <p>
+          The system provides a central server, that you access via a web
+          browser. Multiple users can use the system at the same time. This
+          includes organisers, judges and competitors. The system has been built
+          to increase the ease at which an event can be organised and run, and
+          to provide the basis to provide additional features to an audience.
+          For exemple TV Graphics overlays for live video stream, live results
+          to websites and big screens at venue, etc.
+        </p>
+
+        <a href="KataSoftware-Container.png">
+          <img src="KataSoftware-Container.png" />
+        </a>
+      </section>
+
+      <section>
+        <hr />
+        <p>
+          The software is currenlty able to support IJF Kata format events only,
+          extension to support local formats (BritishJudo for example) is
+          planned.
+        </p>
+        <p>
+          Currently (May 2022) I am looking for test events to confirm
+          fuctionality is parallel with any existing systems. Please contact me
+          (<a href="mailto:lw@judococh.com">Lance Wicks</a>) if you are
+          interested.
+        </p>
+      </section>
+
+      <section>
+        <hr />
+        <p>
+          The system is currently written in Perl, using a SQLlite database and
+          AlmondCSS for the web style. Mojolicious is the web framework
+          providing a simple MVC model to work within. The code is currently
+          under active development on a volunteer basis and is hosted on GitHub
+          (privately currently).
+        </p>
+        <p>
+          The system may migrate to Go-lang for the portability and single
+          binary file for distribution.
+        </p>
+        <p>
+          Developers interested in helping, please contact me and I would love
+          to help you contribute to this AGPL software project (The code is not
+          currently open to all as I don't consider it "ready").
+        </p>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <details>
+        <summary>About Judo-Kata-Tournament-Manager</summary>
+        <h3>© Copyright 2022 Lance Wicks.</h3>
+        <p>
+          For assistance please email
+          <a href="mailto:lw@judocoach.com">lw@judocoach.com</a>.
+        </p>
+        <p>
+          This software uses:
+        </p>
+        <ul>
+          <li><a href="https://www.perl.org/" rel="external">Perl</a></li>
+          <li>
+            <a href="https://mojolicious.io/" rel="external">Mojolicious</a>
+          </li>
+          <li>
+            <a href="https://sqlite.org/index.html" rel="external">SQLite</a>
+          </li>
+          <li>
+            <a
+              href="https://alvaromontoro.github.io/almond.css/demo/"
+              rel="external"
+              >Almond.CSS</a
+            >
+          </li>
+        </ul>
+
+        <p>
+          This software is licensed under the
+          <a
+            href="https://github.com/lancew/judo-kata-tournament-manager/blob/main/LICENSE"
+            >AGPL</a
+          >
+        </p>
+        <p>
+          This sourcecode is available at
+          <a
+            href="https://github.com/lancew/judo-kata-tournament-manager"
+            rel="external"
+            >github.com/lancew/judo-kata-tournament-manager</a
+          >
+        </p>
+      </details>
+    </footer>
+  </body>
+</html>
