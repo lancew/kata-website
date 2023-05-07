@@ -8,7 +8,9 @@ This repository is the source code for the website, not the application itself.
 * The style is AlmondCSS (used also by the application)
 * Hosted (currently) on GitHub Pages: https://lancew.github.io/kata-website/
 
+## Run the site locally
 
+`php -S localhost:8000`
 
 
 
