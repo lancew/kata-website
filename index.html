@@ -1,328 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width">
-    <meta charset="utf-8">
-    <meta name="description" content="Judo Kata software system. Handles International Judo Federation (IJF) format scoring."/>
-    <meta name="keywords" content="judo, kata, software"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Judo Kata Tournament Manager | Scoring Software</title>
+    <meta
+      name="description"
+      content="Organise and score judo kata tournaments in the browser. Built for organisers and judges with EJU-aligned scoring, leaderboards, and offline LAN use."
+    />
     <meta name="author" content="Lance Wicks" />
     <meta name="copyright" content="Lance Wicks" />
-    <meta http-equiv="expires" content="43200"/>
+    <link rel="canonical" href="https://katajudo.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://katajudo.com/" />
+    <meta
+      property="og:title"
+      content="Judo Kata Tournament Manager | Scoring Software"
+    />
+    <meta
+      property="og:description"
+      content="Organise and score judo kata tournaments in the browser. Built for organisers and judges with EJU-aligned scoring, leaderboards, and offline LAN use."
+    />
+    <meta
+      property="og:image"
+      content="https://katajudo.com/KataSoftware-Container.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Judo Kata Tournament Manager | Scoring Software"
+    />
+    <meta
+      name="twitter:description"
+      content="Organise and score judo kata tournaments in the browser. Built for organisers and judges with EJU-aligned scoring, leaderboards, and offline LAN use."
+    />
+    <meta
+      name="twitter:image"
+      content="https://katajudo.com/KataSoftware-Container.png"
+    />
+
     <meta name="yandex-verification" content="f9fff1ca0f81b708" />
-    <title>Judo Kata Tournament Manager Software</title>
+
     <link rel="stylesheet" href="css/almond.css" />
     <link rel="stylesheet" href="css/kata.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Judo Kata Tournament Manager",
+            "url": "https://katajudo.com/",
+            "description": "Software to organise and score judo kata tournaments for organisers and judges."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Judo Kata Tournament Manager",
+            "applicationCategory": "SportsApplication",
+            "operatingSystem": "Web browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "GBP"
+            },
+            "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+            "author": {
+              "@type": "Person",
+              "name": "Lance Wicks",
+              "email": "lw@judocoach.com"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <header class="header">
-      <div class="event_name">
-        <hgroup>
-          <h1>柔道 | 形 <br />Judo Kata Tournament Manager Software</h1>
-        </hgroup>
-      </div>
-      <div class="event_logo">
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-      </div>
+    <header class="site-header">
+      <nav class="inpage-nav" aria-label="On this page">
+        <ul>
+          <li><a href="#why">Why it helps</a></li>
+          <li><a href="#workflow">How an event runs</a></li>
+          <li><a href="#scoring">Scoring</a></li>
+          <li><a href="#deploy">Where it runs</a></li>
+          <li><a href="#demo">Get a demo</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="content">
-      <section>
-        <p>
-          This site to home for a Judo Kata Tournament Software solution to help
-          you organise and run Judo Kata competitions.
+    <main id="main" class="content">
+      <section class="hero" aria-labelledby="hero-heading">
+        <p class="hero-brand" lang="ja">柔道 | 形</p>
+        <h1 id="hero-heading">Judo Kata Tournament Manager</h1>
+        <p class="lede">
+          Browser-based software to organise, score, and rank judo kata
+          competitions — built for event organisers and judges.
         </p>
-        <hr />
-        <p>
-          The system provides a central server, that you access via a web
-          browser. Multiple users can use the system at the same time. This
-          includes organisers, judges and competitors. The system has been built
-          to increase the ease at which an event can be organised and run, and
-          to provide the basis to provide additional features to an audience.
-          For example TV Graphics overlays for live video stream, live results
-          to websites and big screens at venue, etc.
-        </p>
-
-        <figure>  
-         <a href="KataSoftware-Container.png">
-           <img
-             src="KataSoftware-Container.png"
-             alt="Diagram showing software features"
-             loading="eager"
-             width="1046"
-           />
-           <figcaption>Features of the software</figcaption>
-         </a>
-        </figure>
-      </section>
-
-      <section>
-        <hr />
-        <p>
-          The software is currently able to support IJF Kata format events only,
-          extension to support local formats (BritishJudo for example) is
-          planned.
-        </p>
-        <p>
-          Update Jan 2024:<br/>
-          Recent assistance with testing has lead to some improvement to the user interface, including:
-          <ul>
-              <li> Import competitors from CSV
-              <li> Special chracter support improved
-              <li> Goshin Jutsu added
-              <li> Manual adding of competitors/judges/pairs improved
-          </ul>
-        </p>
-        <p>
-          Currently, I am looking for test events to confirm
-          functionality is parallel with any existing systems. Please contact me
-          (<a href="mailto:lw@judococh.com">Lance Wicks</a>) if you are
-          interested.
+        <p class="hero-actions">
+          <a href="mailto:lw@judocoach.com?subject=Kata%20Tournament%20Manager%20demo"
+            >Email Lance for a demo or test event</a
+          >
         </p>
       </section>
 
-      <section>
-        <hr />
-        <p>
-          The system is currently written in Perl, using a SQLite database and
-          AlmondCSS for the web style. Mojolicious is the web framework
-          providing a simple MVC model to work within. The code is currently
-          under active development on a volunteer basis and is hosted on GitHub
-          (privately currently).
-        </p>
-        <p>
-          The system may migrate to Go-lang for the portability and single
-          binary file for distribution.
-        </p>
-        <p>
-          Developers interested in helping, please contact me and I would love
-          to help you contribute to this AGPL software project (The code is not
-          currently open to all as I don't consider it "ready").
-        </p>
+      <section id="why" class="section" aria-labelledby="why-heading">
+        <h2 id="why-heading">Why it helps</h2>
+        <div class="two-col">
+          <div>
+            <h3>For organisers</h3>
+            <ul>
+              <li>
+                Add competitors and judges by hand or import them from CSV
+              </li>
+              <li>
+                Form pairs across categories, run a random performance draw,
+                and track progress as scoresheets are completed
+              </li>
+              <li>
+                Keep the event on a local machine with LAN access for tables —
+                no internet required during the competition
+              </li>
+              <li>
+                Store each event in its own SQLite database for simple backup
+                and reporting
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>For judges</h3>
+            <ul>
+              <li>
+                Enter scoresheets per pair and judge through a clear web
+                interface
+              </li>
+              <li>
+                Record small, medium, and big mistakes, correction values, and
+                forgotten techniques
+              </li>
+              <li>
+                See leaderboards update from calculated totals with EJU-style
+                tie-breaks
+              </li>
+              <li>
+                Work alongside organisers on the same system at the same time
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <hr />
-
-        <h2>Competitors</h2>
+      <section id="workflow" class="section" aria-labelledby="workflow-heading">
+        <h2 id="workflow-heading">How an event runs</h2>
         <p>
-          The starting point of most events is adding competitors, this is done via the web interface. So can be done by multiple people at the same time.
-          You add each competitor individually, creating pairs afterwards. Each competitor can participate in multiple categories.
+          One central server, many browsers. Organisers, judges, and other
+          helpers can work in parallel from the web interface.
+        </p>
+
+        <h3>Competitors</h3>
+        <p>
+          Register competitors through the web UI or CSV import. Each person
+          can enter multiple categories. Create pairs after individuals are in
+          the system.
         </p>
         <figure>
           <img
-             src="screenshots/Competitors-Kata.png"
-             alt="Screenshot showing summary page for competitors"
-             loading="lazy"
-             width="1046"
-           />
+            src="screenshots/Competitors-Kata.png"
+            alt="Competitors summary page listing registered athletes"
+            loading="lazy"
+            width="1046"
+            height="858"
+          />
           <figcaption>Competitors page</figcaption>
         </figure>
-      </section>
 
-      <section>
-        <hr />
-
-        <h2>Pairs</h2>
+        <h3>Pairs</h3>
         <p>
-          Once individuals have been added to the system, pairs can be formed between the individuals for each kata category.
-          Individuals can be in more than one pair; so a participant can be in in multiple pairs in multiple categories.
-
+          Form tori and uke pairs for each kata category. An athlete can appear
+          in more than one pair across categories.
         </p>
         <figure>
           <img
             src="screenshots/Pairs-Kata.png"
-            alt="Screenshot showing all the pairs of competitors and the kata they are competing in"
-             loading="lazy"
-             width="1046"
+            alt="Pairs page showing competitor pairs and their kata categories"
+            loading="lazy"
+            width="1046"
+            height="586"
           />
           <figcaption>Pairs page</figcaption>
         </figure>
-      </section>
 
-      <section>
-        <hr />
-
-        <h2>Judges</h2>
+        <h3>Judges</h3>
         <p>
-          Judo kata are scored by expert judges watching pairs perform.
-          Judges are added per kata, so if a Judge is scoring for multiple kata; they need to be added multiple times currently.
+          Add judges per kata, or import them from CSV. Judges score pairs in
+          the categories they are assigned to.
         </p>
         <figure>
-          <img src="screenshots/Judges-Kata.png"
-           alt="Screenshot showing all the judges and the kata they are judging"
-             loading="lazy"
-             width="1046"
-               />
+          <img
+            src="screenshots/Judges-Kata.png"
+            alt="Judges page listing judges and the kata they are judging"
+            loading="lazy"
+            width="1046"
+            height="644"
+          />
           <figcaption>Judges page</figcaption>
         </figure>
-      </section>
 
-      <section>
-        <hr />
-
-        <h2>Scoresheets</h2>
+        <h3>Draw and scoresheets</h3>
         <p>
-         Once all the competitors, pairs and judges have been created an automated draw is run through the system.
-         Currently, there is now draw for judges; this will come in later versions. All the judges associated with a category (kata) can score any pair's performance.
-         The scoresheets are entered per pair, per judge via a web interface.
+          Run an automated random draw for performance order, then enter
+          scoresheets per pair and judge. With three or more judges, the
+          highest and lowest judge totals are dropped when calculating the pair
+          score.
         </p>
         <figure>
-          <img src="screenshots/Scoresheet-Kata-Pair-Judge.png" />
+          <img
+            src="screenshots/Scoresheet-Kata-Pair-Judge.png"
+            alt="Scoresheet page for a pair and judge with technique scores and mistake controls"
+            loading="lazy"
+            width="1046"
+            height="1102"
+          />
           <figcaption>Scoresheet page</figcaption>
         </figure>
-      </section>
 
-      <section>
-        <hr />
-
-        <h2>Leaderboards</h2>
+        <h3>Leaderboards and progress</h3>
         <p>
-          Are scoresheets are completed, the system will create leaderboards showing the pairs ranked by overall score.
-          This page will provide the results that will be used for awarding medals etc.
+          Leaderboards rank pairs by calculated score. A summary view shows how
+          far the category has progressed — useful for medals, announcements,
+          and keeping the mat schedule moving.
         </p>
         <figure>
-          <img src="screenshots/Leaderboard-Kata.png"
-               alt="Screenshot showing leaderboard page for a specific kata"
-             loading="lazy"
-             width="1046"
-               />
+          <img
+            src="screenshots/Leaderboard-Kata.png"
+            alt="Leaderboard page ranking pairs by total score for a kata"
+            loading="lazy"
+            width="1046"
+            height="512"
+          />
           <figcaption>Leaderboard page</figcaption>
         </figure>
-      </section>
-
-      <section>
-        <hr />
-
-        <h2>Summary page</h2>
-        <p>
-          As the competition progresses, you will want to know how far things are progressing.
-          The system can tell you what percentage of performances have been done, how many scoresheets have been completed, etc.
-        </p>
         <figure>
-          <img src="screenshots/Kata.png"
-               alt="Screenshot showing overview of kata category, including percentage complete"
-             loading="lazy"
-             width="1046"
-               />
-          <figcaption>Summary page</figcaption>
+          <img
+            src="screenshots/Kata.png"
+            alt="Kata category summary showing completion progress"
+            loading="lazy"
+            width="1046"
+            height="941"
+          />
+          <figcaption>Category progress summary</figcaption>
         </figure>
       </section>
 
-      <section>
-        <hr />
-
-        <h2>Other features</h2>
+      <section id="scoring" class="section" aria-labelledby="scoring-heading">
+        <h2 id="scoring-heading">Scoring you can trust</h2>
         <p>
-          The software is configurable to that a event logo can be configured. In the screenshots on this page the event is using the logo for my club.
-          The system currently do a random draw for performance order.
-          Each event is currently stored in a separate (SQLite) database file. This database is very common so many tools are available to create reports, etc.
+          Scoring follows EJU/IJF kata competition practice implemented in the
+          application calculator — not a spreadsheet rewrite at the venue.
         </p>
-      </section>
-
-      <section>
-        <hr />
-
-        <h2>Interested in trying it?</h2>
-        <p>
-          If you are interested in this software please do contact me.
-          I am happy to give a demo online, or give you access to a demo system that you can experiment with.
-          Currently the software is not ready for distribution; but I would love to have some people test the system.
-          <br />
-          There is a online test system, I can link interested people to.
-          <br />
-          Ideally I would like to test against some existing scoresheets and confirm the system is working well.
-          Running it is parallel at an event is the next big step.
-          <br />
-          What other features would you like to see? What features should be developed further; what has not been mentioned?
-          Please contact me if this page has got your interest.
-        </p>
-      </section>
-
-      <section>
-        <hr />
-        <h2>Further reading</h2>
-        <p>Please use the following links for more information on Judo Kata</p>
         <ul>
           <li>
-            <a href="http://www.kodokanjudoinstitute.org/en/waza/forms/"
-              >Kodokan Kata pages</a
-            >: Definitive documentation on Judo kata.
+            Technique evaluation with small, medium, and big mistakes, plus
+            optional +0.5 / −0.5 correction values
           </li>
           <li>
-            <a href="https://www.ijf.org/ijf/documents/15"
-              >IJF Kata Commission pages</a
-            >: International Judo Federation's documents about Judo Kata.
+            Forgotten technique scores zero for that technique and halves the
+            judge’s kata total once (rounded up)
           </li>
           <li>
-            <a href="https://sites.google.com/site/katascoresheets/"
+            With three or more judges, drop the highest and lowest judge totals
+          </li>
+          <li>
+            Tie-breaks: fewer big mistakes, then medium, then small, then
+            average score
+          </li>
+          <li>
+            Competition formula by entry size: up to 6 pairs go straight to a
+            final; 7–11 use one preliminary (top 4 advance); 12+ use two
+            preliminaries (top 3 per group advance)
+          </li>
+        </ul>
+        <h3>Supported kata</h3>
+        <ul>
+          <li>Nage-no-Kata (including 1G, 2G, and 3G variants)</li>
+          <li>Katame-no-Kata (including 1G)</li>
+          <li>Ju-no-Kata</li>
+          <li>Kime-no-Kata</li>
+          <li>Kodokan Goshin Jutsu</li>
+        </ul>
+        <figure>
+          <a href="KataSoftware-Container.png">
+            <img
+              src="KataSoftware-Container.png"
+              alt="Container diagram of the Judo Kata Tournament Manager system components"
+              loading="lazy"
+              width="1046"
+              height="541"
+            />
+            <figcaption>System overview (click for full size)</figcaption>
+          </a>
+        </figure>
+      </section>
+
+      <section id="deploy" class="section" aria-labelledby="deploy-heading">
+        <h2 id="deploy-heading">Runs where you need it</h2>
+        <ul>
+          <li>
+            Access everything through a web browser — no special client install
+            for tableside users
+          </li>
+          <li>
+            Run on a primary machine at the venue; use a local network when
+            multiple devices need access
+          </li>
+          <li>Each event uses its own SQLite database file</li>
+          <li>Optional Docker packaging for consistent deployment</li>
+          <li>
+            Built with Perl, Mojolicious, SQLite, and AlmondCSS; licensed under
+            the AGPL
+          </li>
+        </ul>
+        <p>
+          Audience-facing ideas such as TV graphic overlays and pushing live
+          results to external websites are on the roadmap — they are not part of
+          the current release.
+        </p>
+      </section>
+
+      <section id="demo" class="section cta-panel" aria-labelledby="demo-heading">
+        <h2 id="demo-heading">Interested in trying it?</h2>
+        <p>
+          The software is under active volunteer development and is available
+          for demos and supervised test use. Online walkthroughs, sandbox
+          access, and parallel runs beside an existing scoring process are all
+          welcome.
+        </p>
+        <p>
+          Contact
+          <a href="mailto:lw@judocoach.com">Lance Wicks (lw@judocoach.com)</a>
+          to arrange a demo or discuss a test event.
+        </p>
+      </section>
+
+      <section class="section memorial" aria-labelledby="memorial-heading">
+        <h2 id="memorial-heading">In memory of Michel Kozlowski</h2>
+        <p>
+          Michel Kozlowski passed away in 2023. This site and software would not
+          exist without his many years of dedication to kata and kata scoring
+          software.
+        </p>
+        <img
+          src="mk.jpg"
+          alt="Portrait of Michel Kozlowski"
+          width="660"
+          height="657"
+          loading="lazy"
+        />
+        <p>
+          This website and the software developed here are dedicated to his
+          memory.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="reading-heading">
+        <h2 id="reading-heading">Further reading</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.kodokanjudoinstitute.org/en/waza/forms/"
+              rel="noopener noreferrer"
+              >Kodokan kata pages</a
+            >
+            — definitive documentation on judo kata
+          </li>
+          <li>
+            <a
+              href="https://www.ijf.org/ijf/documents/15"
+              rel="noopener noreferrer"
+              >IJF Kata Commission documents</a
+            >
+            — International Judo Federation kata materials
+          </li>
+          <li>
+            <a
+              href="https://sites.google.com/site/katascoresheets/"
+              rel="noopener noreferrer"
               >Kata Scoresheets (EJU)</a
-            >: Michel Kozlowski's excellent Excel based scoring software.
+            >
+            — Michel Kozlowski’s Excel-based scoring software
           </li>
         </ul>
       </section>
-
-      <section>
-
-        <hr />
-          <p>
-            <b>Michel Kozlowski R.I.P.</b><br />
-            Sadly Mr Kozlowski passed away in 2023, this site and software would not exist had it not been for the many years of dedication given to Kata and Kata Software by Mr Kozlowski.
-          </p>
-          <img src="mk.jpg">
-          <p>
-            This website and the software developed is dedicated to his memory.
-          </p>    
-        <hr />
-
-      </section>
     </main>
 
-    <hr />
-
-    <footer>
+    <footer class="site-footer">
       <details>
-        <summary>About Judo-Kata-Tournament-Manager</summary>
-        <h3>© Copyright 2022-2024 Lance Wicks.</h3>
+        <summary>About Judo Kata Tournament Manager</summary>
+        <h3>© Copyright 2022–2026 Lance Wicks</h3>
         <p>
           For assistance please email
           <a href="mailto:lw@judocoach.com">lw@judocoach.com</a>.
         </p>
         <p>
-          This software uses:
+          Developers interested in contributing: please get in touch. The
+          application is AGPL-licensed and under active development; the source
+          is not publicly open yet while it is brought to a ready state.
         </p>
+        <p>This software uses:</p>
         <ul>
-          <li><a href="https://www.perl.org/" rel="external">Perl</a></li>
           <li>
-            <a href="https://mojolicious.io/" rel="external">Mojolicious</a>
+            <a href="https://www.perl.org/" rel="noopener noreferrer">Perl</a>
           </li>
           <li>
-            <a href="https://sqlite.org/index.html" rel="external">SQLite</a>
+            <a href="https://mojolicious.io/" rel="noopener noreferrer"
+              >Mojolicious</a
+            >
+          </li>
+          <li>
+            <a href="https://sqlite.org/index.html" rel="noopener noreferrer"
+              >SQLite</a
+            >
           </li>
           <li>
             <a
               href="https://alvaromontoro.github.io/almond.css/demo/"
-              rel="external"
+              rel="noopener noreferrer"
               >Almond.CSS</a
             >
           </li>
         </ul>
-
         <p>
           The kata software is licensed under the
           <a
             href="https://github.com/lancew/judo-kata-tournament-manager/blob/main/LICENSE"
+            rel="noopener noreferrer"
             >AGPL</a
-          >
+          >.
         </p>
         <p>
-          This website's source code is available at
-          <a href="https://github.com/lancew/kata-website" rel="external">
-            github.com/lancew/kata-website</a
-          >
+          This website’s source code is available at
+          <a
+            href="https://github.com/lancew/kata-website"
+            rel="noopener noreferrer"
+            >github.com/lancew/kata-website</a
+          >.
         </p>
       </details>
     </footer>
