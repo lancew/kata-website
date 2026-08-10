@@ -1,17 +1,22 @@
 # kata-website
 
-This repository is the source code for the website, not the application itself.
+Marketing site for **Judo Kata Tournament Manager** (not the application itself).
 
-## Overview
+- Live site: https://katajudo.com/ (GitHub Pages; `CNAME` → `katajudo.com`)
+- Source of the product: private/companion repo `judo-kata-tournament-manager`
+- Design notes: `docs/superpowers/specs/2026-08-10-marketing-site-refresh-design.md`
 
-* The website is simple HTML (see index.html) for the home page.
-* The style is AlmondCSS (used also by the application)
-* Hosted (currently) on GitHub Pages: https://lancew.github.io/kata-website/
+## Stack
 
-## Run the site locally
+- Single static `index.html`
+- [AlmondCSS](https://alvaromontoro.github.io/almond.css/demo/) plus `css/kata.css`
 
-`php -S localhost:8000`
+## Run locally
 
+```bash
+python3 -m http.server 8000
+```
 
+Then open http://localhost:8000/
 
-(c)2022 Lance Wicks.
+(c) 2022–2026 Lance Wicks
