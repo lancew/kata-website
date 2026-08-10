@@ -37,9 +37,7 @@
 }
 
 .hero {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 1.5rem 1rem 2rem;
+  padding: 1.5rem 0 2rem;
 }
 
 .hero-brand {
@@ -74,11 +72,6 @@
   margin: 2.5rem 0;
   padding-top: 0.5rem;
   border-top: 1px solid #ccc;
-}
-
-.section:first-of-type {
-  border-top: 0;
-  margin-top: 0;
 }
 
 .two-col {

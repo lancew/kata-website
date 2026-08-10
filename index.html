@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Judo Kata Tournament Manager | Scoring Software</title>
     <meta
       name="description"
@@ -24,7 +25,7 @@
     />
     <meta
       property="og:image"
-      content="https://katajudo.com/KataSoftware-Container.png"
+      content="https://katajudo.com/og-image.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -37,7 +38,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://katajudo.com/KataSoftware-Container.png"
+      content="https://katajudo.com/og-image.png"
     />
 
     <meta name="yandex-verification" content="f9fff1ca0f81b708" />
@@ -55,20 +56,20 @@
         "@graph": [
           {
             "@type": "WebSite",
+            "@id": "https://katajudo.com/#website",
             "name": "Judo Kata Tournament Manager",
             "url": "https://katajudo.com/",
-            "description": "Software to organise and score judo kata tournaments for organisers and judges."
+            "description": "Software to organise and score judo kata tournaments for organisers and judges.",
+            "mainEntity": {
+              "@id": "https://katajudo.com/#app"
+            }
           },
           {
             "@type": "SoftwareApplication",
+            "@id": "https://katajudo.com/#app",
             "name": "Judo Kata Tournament Manager",
             "applicationCategory": "SportsApplication",
             "operatingSystem": "Web browser",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "GBP"
-            },
             "license": "https://www.gnu.org/licenses/agpl-3.0.html",
             "author": {
               "@type": "Person",
@@ -303,8 +304,8 @@
               width="1046"
               height="541"
             />
-            <figcaption>System overview (click for full size)</figcaption>
           </a>
+          <figcaption>System overview (click for full size)</figcaption>
         </figure>
       </section>
 
