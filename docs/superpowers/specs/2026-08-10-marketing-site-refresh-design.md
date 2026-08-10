@@ -50,7 +50,7 @@ Use these as marketing facts; do not invent beyond them:
 
 - Central web app (Mojolicious + Perl); multi-user via browser
 - Competitors, pairs, judges, scoresheets, leaderboards, draw, progress/summary
-- CSV competitor import (as already mentioned on site; keep if still present in app)
+- CSV import for competitors and judges (routes and controllers present in the app)
 - Supported kata from `Judo::Kata::Structure`: Ju No Kata, Katame No Kata, Kime No Kata, Kodokan Goshin Jutsu, Nage No Kata, Nage No Kata 1G/2G/3G, Katame No Kata 1G
 - Scoring calculator behaviour: technique mistakes / correction value / forgotten technique (halve once, ceil); drop highest and lowest judge totals when ≥3 judges; EJU-style tie-breaks (big → medium → small mistakes → average); competition formula by pair count (≤6 direct final; 7–11 one prelim advance 4; ≥12 two prelims advance 3 per group)
 - Offline/local primary machine; LAN for multiple devices (`docs/03-system-scope-and-context.md`)
