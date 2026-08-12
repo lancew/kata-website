@@ -7,7 +7,7 @@
     <title>Judo Kata Tournament Manager | Scoring Software</title>
     <meta
       name="description"
-      content="Organise and score judo kata on a laptop LAN. Judge tablets, announcer and live results, EJU or BJA-style scoring, and printable PDF packs."
+      content="Organise and score judo kata on a laptop LAN. Judge tablets with live scores, announcer and results, IJF import, EJU or BJA-style scoring, and printable PDF packs."
     />
     <meta name="author" content="Lance Wicks" />
     <meta name="copyright" content="Lance Wicks" />
@@ -21,7 +21,7 @@
     />
     <meta
       property="og:description"
-      content="Organise and score judo kata on a laptop LAN. Judge tablets, announcer and live results, EJU or BJA-style scoring, and printable PDF packs."
+      content="Organise and score judo kata on a laptop LAN. Judge tablets with live scores, announcer and results, IJF import, EJU or BJA-style scoring, and printable PDF packs."
     />
     <meta
       property="og:image"
@@ -34,7 +34,7 @@
     />
     <meta
       name="twitter:description"
-      content="Organise and score judo kata on a laptop LAN. Judge tablets, announcer and live results, EJU or BJA-style scoring, and printable PDF packs."
+      content="Organise and score judo kata on a laptop LAN. Judge tablets with live scores, announcer and results, IJF import, EJU or BJA-style scoring, and printable PDF packs."
     />
     <meta
       name="twitter:image"
@@ -59,7 +59,7 @@
             "@id": "https://katajudo.com/#website",
             "name": "Judo Kata Tournament Manager",
             "url": "https://katajudo.com/",
-            "description": "Software to organise and score judo kata tournaments, with judge tablets, hall displays, and printable PDF scoresheets.",
+            "description": "Software to organise and score judo kata tournaments, with judge tablets, live provisional scores, hall displays, IJF import, and printable PDF scoresheets.",
             "mainEntity": {
               "@id": "https://katajudo.com/#app"
             }
@@ -68,7 +68,7 @@
             "@type": "SoftwareApplication",
             "@id": "https://katajudo.com/#app",
             "name": "Judo Kata Tournament Manager",
-            "description": "Software to organise and score judo kata tournaments, with judge tablets, hall displays, and printable PDF scoresheets.",
+            "description": "Software to organise and score judo kata tournaments, with judge tablets, live provisional scores, hall displays, IJF import, and printable PDF scoresheets.",
             "applicationCategory": "SportsApplication",
             "operatingSystem": "Web browser",
             "license": "https://www.gnu.org/licenses/agpl-3.0.html",
@@ -125,7 +125,8 @@
                 in Config
               </li>
               <li>
-                Add competitors and judges by hand or import them from CSV
+                Add competitors and judges by hand, import them from CSV, or
+                pull competitors from this year’s IJF kata events on Judobase
               </li>
               <li>
                 Run the draw, seat the panel, and assign performances to mats
@@ -135,8 +136,8 @@
                 the table
               </li>
               <li>
-                Lock clerk pages with a PIN; share public links for tablets and
-                projectors
+                Lock clerk pages with a PIN, including Config and the scoring
+                audit; share public links for tablets and projectors
               </li>
               <li>
                 Keep each event in its own SQLite file; no internet required on
@@ -148,15 +149,16 @@
             <h3>For judges</h3>
             <ul>
               <li>
-                Open a seat URL that shows your name and the pair on the mat
+                Open a seat URL that shows your name, the kata, and tori and
+                uke on the mat
               </li>
               <li>
                 Tap small, medium, and big mistakes, forgotten techniques, and
-                ± corrections
+                ± corrections — each tap is saved at once
               </li>
               <li>
-                Submit when the kata finishes; the tablet waits for the rest of
-                the panel
+                Submit when the kata finishes to lock the seat; the tablet waits
+                for the rest of the panel
               </li>
               <li>
                 Sit as shadow to record a score that is stored and ignored in
@@ -176,8 +178,8 @@
                 judging team, who is on deck
               </li>
               <li>
-                Project live results that update in place and can rotate through
-                kata
+                Project live results that update as judges tap, with provisional
+                points and an in-progress marker, and can rotate through kata
               </li>
               <li>Switch English or French on the live screens</li>
               <li>
@@ -219,20 +221,32 @@
 
         <h3>Competitors</h3>
         <p>
-          Register competitors through the web UI or CSV import. The CSV header
-          is <code>"Country","Given Name","Surname"</code> with quoted fields.
-          Each person can enter multiple categories. Create pairs after
-          individuals are in the system.
+          Register competitors through the web UI, CSV import, or from this
+          year’s IJF kata events on Judobase. The CSV header is
+          <code>"Country","Given Name","Surname"</code> with quoted fields.
+          Judobase import adds people and skips anyone already in this event
+          (same name and country). Pairing is done on the Pairs page. Each
+          person can enter multiple categories.
         </p>
         <figure>
           <img
             src="screenshots/Competitors-Kata.png"
-            alt="Competitors page listing registered athletes with country codes"
+            alt="Competitors page with Add competitor, Import CSV, and Import from IJF event, listing registered athletes"
             loading="lazy"
             width="1046"
-            height="669"
+            height="735"
           />
           <figcaption>Competitors page</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="screenshots/Import-IJF.png"
+            alt="Import from IJF event page listing this year’s Judobase kata championships with an Import button per event"
+            loading="lazy"
+            width="1046"
+            height="1037"
+          />
+          <figcaption>Import competitors from an IJF event</figcaption>
         </figure>
 
         <h3>Pairs</h3>
@@ -246,7 +260,7 @@
             alt="Pairs page showing competitor pairs and their kata categories"
             loading="lazy"
             width="1046"
-            height="654"
+            height="669"
           />
           <figcaption>Pairs page</figcaption>
         </figure>
@@ -300,39 +314,44 @@
         <p>
           Add a tatami, then assign performances in the order you want them to
           run — or assign several and randomize unfinished (the pair currently
-          on the mat stays put). Mark a seat as shadow if that judge is
-          recording only: the score is stored and ignored in the total.
-          Unsubmit a seat if the judge sent scores too soon, while that
-          performance is still current.
+          on the mat stays put). The clerk page shows who is scoring now, who
+          is on deck and double deck, and completed performances with a link to
+          edit scores. Mark a seat as shadow if that judge is recording only:
+          the score is stored and ignored in the total. Unsubmit a seat if the
+          judge sent scores too soon, while that performance is still current.
         </p>
         <figure>
           <img
             src="screenshots/Mats-Clerk.png"
-            alt="Mat clerk page for Tatami 1 showing current pair, judge seats, shadow and unsubmit controls, and LAN links"
+            alt="Mat clerk page for Tatami 1 showing now scoring, upcoming on-deck pairs, completed performances, judge seats, and LAN links"
             loading="lazy"
             width="1046"
-            height="1164"
+            height="1431"
           />
           <figcaption>Mat clerk page</figcaption>
         </figure>
 
         <h3>Judge tablets</h3>
         <p>
-          Each seat URL is one named judge. For every technique, tap small (S),
-          medium (M), big (B), forgotten (F), and +/− correction. Submit once
-          the kata is finished — you will be asked to confirm. After submit the
-          seat waits until the other official seats submit, then the mat
-          advances. The tablet updates in place when the mat changes. Tablets
-          have dark/light and zoom controls, and they hide the clerk navigation
-          so judges do not wander off.
+          Each seat URL is one named judge. The tablet shows the seat, the
+          judge’s name, the kata, and tori and uke. For every technique, tap
+          small (S), medium (M), big (B), forgotten (F), and +/− correction.
+          Each tap is saved immediately — overview progress, live results, and
+          leaderboards update with provisional scores and an in-progress
+          marker. Submit once the kata is finished — you will be asked to
+          confirm — to lock that seat. After submit the seat waits until the
+          other official seats submit, then the mat advances. The tablet
+          updates in place when the mat changes. Tablets have dark/light and
+          zoom controls, and they hide the clerk navigation so judges do not
+          wander off.
         </p>
         <figure>
           <img
             src="screenshots/Judge-Tablet.png"
-            alt="Judge tablet for seat 2 showing the named judge, current pair, and technique scoring grid with S M B F and plus minus controls"
+            alt="Judge tablet for seat 2 showing the named judge, tori and uke, and technique scoring grid with S M B F and plus minus controls"
             loading="lazy"
             width="1046"
-            height="1467"
+            height="1576"
           />
           <figcaption>Judge tablet seat</figcaption>
         </figure>
@@ -358,8 +377,9 @@
         <h3>Electronic scoresheets</h3>
         <p>
           If a phone fails, the clerk scoresheets write the same scores. Open
-          scoresheets, then kata, pair, and judge. Use +/− on each mistake
-          column. The page total is that judge’s kata score.
+          scoresheets, then kata, pair, and judge. The pair page lists the
+          judges seated for that performance. Use +/− on each mistake column.
+          The page total is that judge’s kata score.
         </p>
         <figure>
           <img
@@ -437,15 +457,17 @@
         <h3>Live results</h3>
         <p>
           Project the ranking on a hall screen — large type, no clerk menu.
-          Scores update in place. Open <code>/results?rotate=1</code> to loop
-          through kata; how long each stays on screen is set in Config. Switch
-          language with <code>?lang=en</code> or <code>fr</code>; use
+          Scores update in place as judges tap, including provisional points
+          while a pair is still being scored, with an in-progress marker and
+          progress %. Open <code>/results?rotate=1</code> to loop through kata;
+          how long each stays on screen is set in Config. Switch language with
+          <code>?lang=en</code> or <code>fr</code>; use
           <code>?theme=dark</code> and <code>?zoom=</code> like the tablets.
         </p>
         <figure>
           <img
             src="screenshots/Live-Results.png"
-            alt="Live results display for Nage-no-Kata showing ranked pairs, points, and who advances"
+            alt="Live results display for Nage-no-Kata showing ranked pairs, points, and an in-progress marker on a pair still being scored"
             loading="lazy"
             width="1046"
             height="654"
@@ -455,19 +477,37 @@
 
         <h3>Leaderboards and CSV</h3>
         <p>
-          Leaderboards are the same ranking for the clerk. Download totals CSV
-          (rank, country, pair, points) and techniques CSV (per judge, per
-          technique).
+          Leaderboards are the same ranking for the clerk, including
+          provisional totals and the in-progress marker while a panel is still
+          scoring. Download totals CSV (rank, country, pair, points) and
+          techniques CSV (per judge, per technique).
         </p>
         <figure>
           <img
             src="screenshots/Leaderboard-Kata.png"
-            alt="Leaderboard page ranking pairs by total score with CSV download links"
+            alt="Leaderboard page ranking pairs by total score with CSV download links and an in-progress marker"
             loading="lazy"
             width="1046"
             height="654"
           />
           <figcaption>Leaderboard page</figcaption>
+        </figure>
+
+        <h3>Scoring audit</h3>
+        <p>
+          Under Admin, the scoring audit log records tablet taps, submits, and
+          unsubmits. Filter by mat, performance, seat, action, judge, or time
+          if you need to see what was marked and when.
+        </p>
+        <figure>
+          <img
+            src="screenshots/Scoring-Audit.png"
+            alt="Admin scoring audit log with filters for mat, seat, action, and judge, and a table of recent score draft updates"
+            loading="lazy"
+            width="1046"
+            height="899"
+          />
+          <figcaption>Scoring audit log</figcaption>
         </figure>
 
         <h3>Category progress</h3>
@@ -568,8 +608,9 @@
           <li>Optional Docker packaging for consistent deployment</li>
           <li>
             Organiser PIN protects clerk pages (competitors, judges, pairs,
-            scoresheets, draw, config, mats clerk, leaderboards). Results,
-            announcer, judge seats, and schedule stay reachable on the LAN
+            scoresheets, draw, config, mats clerk, leaderboards, scoring
+            audit). Results, announcer, judge seats, and schedule stay
+            reachable on the LAN
           </li>
           <li>
             A public token gives <code>/p/…</code> links for tablets, announcer,
