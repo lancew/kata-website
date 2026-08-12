@@ -142,6 +142,93 @@ figure img {
   margin: 1rem 0;
 }
 
+img.zoomable {
+  cursor: zoom-in;
+}
+
+dialog.lightbox {
+  inset: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  min-width: 0;
+  margin: 0;
+  padding: 3rem 1rem 1rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  transform: none;
+  z-index: 10;
+}
+
+dialog.lightbox[open] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+dialog.lightbox::before,
+dialog.lightbox::after {
+  content: none;
+  display: none;
+}
+
+dialog.lightbox > * {
+  max-height: none;
+  overflow: visible;
+}
+
+dialog.lightbox::backdrop {
+  background: rgb(0 0 0 / 0.8);
+}
+
+dialog.lightbox .lightbox-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #111;
+  color: #fff;
+  font-size: 1.85rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+  cursor: pointer;
+}
+
+dialog.lightbox .lightbox-close:hover,
+dialog.lightbox .lightbox-close:focus-visible {
+  background: #333;
+  color: #fff;
+  border: 0;
+}
+
+.lightbox img {
+  display: block;
+  max-width: 92vw;
+  max-height: calc(100vh - 4rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
 .site-footer {
   border-top: 1px solid #ccc;
   padding-top: 1rem;
