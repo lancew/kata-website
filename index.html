@@ -7,7 +7,7 @@
     <title>Judo Kata Tournament Manager | Scoring Software</title>
     <meta
       name="description"
-      content="Organise and score judo kata on a laptop LAN. Judge tablets with live scores, announcer and results, IJF import, EJU or BJA-style scoring, and printable PDF packs."
+      content="Organise and score judo kata on a laptop LAN. Judge tablets, live results, IJF import, EJU, BJA-style or IJF scoring, and printable PDF packs."
     />
     <meta name="author" content="Lance Wicks" />
     <meta name="copyright" content="Lance Wicks" />
@@ -21,7 +21,7 @@
     />
     <meta
       property="og:description"
-      content="Organise and score judo kata on a laptop LAN. Judge tablets with live scores, announcer and results, IJF import, EJU or BJA-style scoring, and printable PDF packs."
+      content="Organise and score judo kata on a laptop LAN. Judge tablets, live results, IJF import, EJU, BJA-style or IJF scoring, and printable PDF packs."
     />
     <meta
       property="og:image"
@@ -34,7 +34,7 @@
     />
     <meta
       name="twitter:description"
-      content="Organise and score judo kata on a laptop LAN. Judge tablets with live scores, announcer and results, IJF import, EJU or BJA-style scoring, and printable PDF packs."
+      content="Organise and score judo kata on a laptop LAN. Judge tablets, live results, IJF import, EJU, BJA-style or IJF scoring, and printable PDF packs."
     />
     <meta
       name="twitter:image"
@@ -59,7 +59,7 @@
             "@id": "https://katajudo.com/#website",
             "name": "Judo Kata Tournament Manager",
             "url": "https://katajudo.com/",
-            "description": "Software to organise and score judo kata tournaments, with judge tablets, live provisional scores, hall displays, IJF import, and printable PDF scoresheets.",
+            "description": "Software to organise and score judo kata tournaments, with judge tablets, live provisional scores, hall displays, IJF import, three scoring rulesets, and printable PDF scoresheets.",
             "mainEntity": {
               "@id": "https://katajudo.com/#app"
             }
@@ -68,7 +68,7 @@
             "@type": "SoftwareApplication",
             "@id": "https://katajudo.com/#app",
             "name": "Judo Kata Tournament Manager",
-            "description": "Software to organise and score judo kata tournaments, with judge tablets, live provisional scores, hall displays, IJF import, and printable PDF scoresheets.",
+            "description": "Software to organise and score judo kata tournaments, with judge tablets, live provisional scores, hall displays, IJF import, three scoring rulesets, and printable PDF scoresheets.",
             "applicationCategory": "SportsApplication",
             "operatingSystem": "Web browser",
             "license": "https://www.gnu.org/licenses/agpl-3.0.html",
@@ -201,42 +201,63 @@
         <h3>Config</h3>
         <p>
           Before anyone walks in, set the event name, location, dates, and logo.
-          Choose how many referees sit a performance, EJU or kata-judge/BJA
-          scoring, breaks every N performances for M minutes, and whether the
-          judging team rotates at each break. Tick the kata this event will run.
-          Optionally set an organiser PIN, a public token for spectator and
-          tablet links, and how long each kata stays on a rotating results
-          projector.
+          Choose how many judges sit a performance, schedule breaks, decide
+          whether the judging team rotates, and tick the kata this event will
+          run. You can also set an organiser PIN, create public links for tablets
+          and displays, and choose how long each kata stays on a rotating results
+          screen.
+        </p>
+        <p>
+          Event rules live here too. Pick EJU, kata-judge/BJA-style, or IJF
+          scoring independently from the current or IJF competition formula.
+          Nationality policy controls how the draw prefers judges from outside
+          the pair's countries, while optional Senior and U23 registration rules
+          turn on the corresponding age, grade, division, and entry checks.
         </p>
         <figure>
           <img
             src="screenshots/Config.png"
-            alt="Config page with event identity, scoring rules, PIN, public token, and included kata"
+            alt="Config page showing IJF scoring, IJF competition formula, hard judge nationality policy, and Senior and U23 registration rules"
             loading="lazy"
             width="1046"
-            height="1461"
+            height="1721"
           />
-          <figcaption>Event config</figcaption>
+          <figcaption>Event scoring, draw, and registration controls</figcaption>
         </figure>
 
         <h3>Competitors</h3>
         <p>
-          Register competitors through the web UI, CSV import, or from this
-          year’s IJF kata events on Judobase. The CSV header is
-          <code>"Country","Given Name","Surname"</code> with quoted fields.
-          Judobase import adds people and skips anyone already in this event
-          (same name and country). Pairing is done on the Pairs page. Each
-          person can enter multiple categories.
+          Register competitors through the web UI, CSV import, or from this year's
+          IJF kata events on Judobase. The CSV header starts with
+          <code>"Country","Given Name","Surname"</code> and can include
+          <code>"Birth Year","Grade"</code>. Judobase import adds people and
+          skips anyone already in this event with the same name and country.
+        </p>
+        <p>
+          When Senior or U23 registration rules are switched on, birth year and
+          grade become required and invalid entries are blocked before they
+          reach the draw. Judobase cannot supply those two fields, so leave
+          registration checks off for that import, or enter competitors
+          manually or by CSV.
+        </p>
+        <p>
+          Senior requires both partners to be at least 16 and 1st Dan, with one
+          Senior pair per person. U23 requires both to be 16–22 and at least 1st
+          Kyu, allows Nage-no-Kata, Ju-no-Kata, or Katame-no-Kata, and permits
+          up to two U23 pairs per person. Leave the setting off for ordinary
+          club-event entry.
         </p>
         <figure>
           <img
             src="screenshots/Competitors-Kata.png"
-            alt="Competitors page with Add competitor, Import CSV, and Import from IJF event, listing registered athletes"
+            alt="Competitors page listing country, name, birth year, and grade"
             loading="lazy"
             width="1046"
             height="735"
           />
-          <figcaption>Competitors page</figcaption>
+          <figcaption
+            >Competitor details used for optional eligibility checks</figcaption
+          >
         </figure>
         <figure>
           <img
@@ -251,26 +272,33 @@
 
         <h3>Pairs</h3>
         <p>
-          Form tori and uke pairs for each kata. The same two people can be a
-          pair in more than one kata.
+          Form tori and uke pairs for each kata. When registration checks are
+          on, choose Senior or U23 for the pair; the application checks both
+          partners' calendar-year age and grade, the permitted kata, and the
+          entry limit for that division.
+        </p>
+        <p>
+          You can also give previous medallists an optional seed rank. In a
+          two-group preliminary, the draw spreads those heads of series across
+          the groups while keeping performance order within each group random.
         </p>
         <figure>
           <img
             src="screenshots/Pairs-Kata.png"
-            alt="Pairs page showing competitor pairs and their kata categories"
+            alt="Pairs page listing tori and uke, kata, Senior or U23 division, and seed rank"
             loading="lazy"
             width="1046"
-            height="669"
+            height="816"
           />
-          <figcaption>Pairs page</figcaption>
+          <figcaption>Pair divisions and heads of series</figcaption>
         </figure>
 
         <h3>Judges</h3>
         <p>
           Add judges per kata, or import them from CSV with
           <code>"Country","Given Name","Surname","Kata"</code> (use the kata
-          code, for example <code>nagenokata</code>). You need at least as many
-          judges on a kata as referees per performance.
+          code, for example <code>nagenokata</code>). You need at least the
+          number of judges per performance selected in Config.
         </p>
         <figure>
           <img
@@ -285,20 +313,21 @@
 
         <h3>Draw</h3>
         <p>
-          Run an automated random draw for performance order. That seats the
-          judges (seat 1 is the first listed) and can rotate the panel at each
-          break when you have extra judges. Running the draw again overwrites
-          the order for that kata; tick remove previous scores if you also want
-          to wipe scores already entered.
+          Run an automated draw for performance order and seated panels. You can
+          keep the current formula — up to 6 pairs go straight to a final, 7–11
+          use one preliminary with the top 4 advancing, and 12 or more use two
+          groups with the top 3 from each — or select the IJF formula: up to 6
+          direct, 7–9 with the top 6 advancing, and 10 or more in two groups with
+          the top 3 from each.
         </p>
         <p>
-          Pair counts pick the competition formula:
+          Seed ranks are used only to spread heads of series across two
+          preliminary groups; order within a group remains random. When judges
+          are seated automatically, the configured nationality policy prefers
+          officials who do not share tori or uke's IOC country. Running the draw
+          again overwrites that kata's order, with an optional wipe when you
+          also need to remove scores already entered.
         </p>
-        <ul>
-          <li>6 or fewer pairs — direct final</li>
-          <li>7–11 pairs — one preliminary (top 4 advance)</li>
-          <li>12 or more — two preliminaries (top 3 per group)</li>
-        </ul>
         <figure>
           <img
             src="screenshots/Draw.png"
@@ -313,22 +342,27 @@
         <h3>Mats</h3>
         <p>
           Add a tatami, then assign performances in the order you want them to
-          run — or assign several and randomize unfinished (the pair currently
-          on the mat stays put). The clerk page shows who is scoring now, who
-          is on deck and double deck, and completed performances with a link to
-          edit scores. Mark a seat as shadow if that judge is recording only:
-          the score is stored and ignored in the total. Unsubmit a seat if the
-          judge sent scores too soon, while that performance is still current.
+          run — or assign several and randomize unfinished while the current
+          pair stays put. The PIN-protected mat clerk acts as the event-day
+          supervisor, showing who is scoring now, who is on deck and double
+          deck, completed performances, judge seats, and links to edit scores.
+        </p>
+        <p>
+          If an official judge shares tori or uke's IOC country, the clerk sees
+          a warning and can choose an eligible replacement for this performance
+          only. A seat with submitted or saved scores must be unsubmitted first.
+          Shadow seats remain available for judge development and do not count
+          in either the total or the nationality rule.
         </p>
         <figure>
           <img
             src="screenshots/Mats-Clerk.png"
-            alt="Mat clerk page for Tatami 1 showing now scoring, upcoming on-deck pairs, completed performances, judge seats, and LAN links"
+            alt="Mat clerk and supervisor page showing a judge nationality conflict and eligible replacement control"
             loading="lazy"
             width="1046"
-            height="1431"
+            height="1520"
           />
-          <figcaption>Mat clerk page</figcaption>
+          <figcaption>Mat supervisor nationality warning and replacement</figcaption>
         </figure>
 
         <h3>Judge tablets</h3>
@@ -530,37 +564,30 @@
       <section id="scoring" class="section" aria-labelledby="scoring-heading">
         <h2 id="scoring-heading">Scoring you can trust</h2>
         <p>
-          Scoring follows kata competition practice implemented in the
-          application calculator — not a spreadsheet rewrite at the venue.
-          Choose the ruleset in Config.
+          Scoring follows the ruleset you choose in Config, so the same tablet
+          marks produce the expected event total without rebuilding a
+          spreadsheet at the venue. EJU drops the highest and lowest judge
+          totals when there are three or more official judges; a forgotten
+          technique zeroes that technique and halves that judge's kata total
+          once, rounded up.
+        </p>
+        <p>
+          kata-judge/BJA-style scoring discards per technique, keeps ordinary
+          scores between 1 and 10, and halves without rounding up. IJF also
+          discards per technique: five official judges drop high and low, four
+          drop low, and three or fewer keep every mark. IJF uses the EJU
+          technique range, including a possible 10.5 correction, and any
+          official forgotten mark halves the pair total once. Shadow seats
+          never count in any ruleset.
         </p>
         <ul>
           <li>
-            <strong>EJU</strong> (default): drop the highest and lowest judge
-            totals when there are three or more official judges; a forgotten
-            technique zeroes that technique, then halves the judge’s kata total
-            once (rounded up); a +1 correction can reach 10.5
+            Technique evaluation uses small, medium, and big mistakes, forgotten
+            techniques, and optional correction values
           </li>
           <li>
-            <strong>kata-judge / BJA-style</strong>: scores stay between 1 and
-            10 (0 if forgotten); dropping is per technique; forgotten halves
-            without rounding up
-          </li>
-          <li>
-            Technique evaluation with small, medium, and big mistakes, plus
-            optional correction values
-          </li>
-          <li>
-            Shadow seats never count in either ruleset
-          </li>
-          <li>
-            Tie-breaks: fewer big mistakes, then medium, then small, then
+            Tie-breaks use fewer big mistakes, then medium, then small, then
             average score
-          </li>
-          <li>
-            Competition formula by entry size: up to 6 pairs go straight to a
-            final; 7–11 use one preliminary (top 4 advance); 12+ use two
-            preliminaries (top 3 per group advance)
           </li>
         </ul>
         <h3>Supported kata</h3>
