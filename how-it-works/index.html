@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Lance Wicks" />
+    <meta name="copyright" content="Lance Wicks" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Judo Kata Tournament Manager" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="https://katajudo.com/og-image.png" />
+    <meta property="og:image:alt" content="Judo Kata Tournament Manager" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://katajudo.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Judo Kata Tournament Manager" />
+    <link rel="stylesheet" href="/css/almond.css" />
+    <link rel="stylesheet" href="/css/kata.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>How an event runs | Judo Kata Tournament Manager</title>
+    <meta name="description" content="From config and Judobase import to judge tablets, live results, and a printable PDF pack. Run a judo kata event from one laptop on the LAN." />
+    <link rel="canonical" href="https://katajudo.com/how-it-works/" />
+    <meta property="og:url" content="https://katajudo.com/how-it-works/" />
+    <meta property="og:title" content="How an event runs | Judo Kata Tournament Manager" />
+    <meta property="og:description" content="From config and Judobase import to judge tablets, live results, and a printable PDF pack. Run a judo kata event from one laptop on the LAN." />
+    <meta name="twitter:title" content="How an event runs | Judo Kata Tournament Manager" />
+    <meta name="twitter:description" content="From config and Judobase import to judge tablets, live results, and a printable PDF pack. Run a judo kata event from one laptop on the LAN." />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://katajudo.com/#website",
+      "name": "Judo Kata Tournament Manager",
+      "url": "https://katajudo.com/",
+      "description": "Browser-based software to organise, score, and display judo kata competitions from one laptop on the local network.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://katajudo.com/#author"
+      },
+      "mainEntity": {
+        "@id": "https://katajudo.com/#app"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://katajudo.com/#author",
+      "name": "Lance Wicks",
+      "email": "lw@judocoach.com",
+      "url": "https://katajudo.com/about/",
+      "sameAs": [
+        "https://github.com/lancew",
+        "https://www.linkedin.com/in/lancew",
+        "https://perl.kiwi/typing"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://katajudo.com/#app",
+      "name": "Judo Kata Tournament Manager",
+      "url": "https://katajudo.com/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://katajudo.com/how-it-works/#webpage",
+      "url": "https://katajudo.com/how-it-works/",
+      "name": "How an event runs | Judo Kata Tournament Manager",
+      "description": "From config and Judobase import to judge tablets, live results, and a printable PDF pack. Run a judo kata event from one laptop on the LAN.",
+      "isPartOf": {
+        "@id": "https://katajudo.com/#website"
+      },
+      "about": {
+        "@id": "https://katajudo.com/#app"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://katajudo.com/og-image.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://katajudo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How it works",
+          "item": "https://katajudo.com/how-it-works/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <p class="site-brand"><a href="/">Judo Kata Tournament Manager</a></p>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/how-it-works/" aria-current="page">How it works</a></li>
+          <li><a href="/scoring/">Scoring</a></li>
+          <li><a href="/on-site/">On-site</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="mailto:lw@judocoach.com?subject=Kata%20Tournament%20Manager%20demo">Get a demo</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/how-it-works/" aria-current="page">How it works</a></li>
+        </ol>
+      </nav>
+
+      <header class="hero">
+        <h1 id="workflow-heading">How an event runs</h1>
+        <p class="lede">
+          One laptop, many browsers. Clerks, judge tablets, the announcer, and
+          live results stay in sync on the local network. The in-app How to page
+          walks through the same flow.
+        </p>
+        <p>
+          Scoring rulesets are documented on the
+          <a href="/scoring/">scoring page</a>. For someone to run the laptop at
+          your competition, see
+          <a href="/on-site/">on-site support</a>.
+        </p>
+      </header>
+      <nav class="inpage-nav" aria-label="On this page">
+        <ul>
+          <li><a href="#config">Config</a></li>
+          <li><a href="#competitors">Competitors</a></li>
+          <li><a href="#pairs">Pairs</a></li>
+          <li><a href="#judges">Judges</a></li>
+          <li><a href="#draw">Draw</a></li>
+          <li><a href="#mats">Mats</a></li>
+          <li><a href="#tablets">Judge tablets</a></li>
+          <li><a href="#announcer">Announcer</a></li>
+          <li><a href="#scoresheets">Scoresheets</a></li>
+          <li><a href="#pdf">PDF pack</a></li>
+          <li><a href="#live-results">Live results</a></li>
+          <li><a href="#leaderboards">Leaderboards</a></li>
+          <li><a href="#audit">Scoring audit</a></li>
+          <li><a href="#progress">Progress</a></li>
+          <li><a href="#deploy">Where it runs</a></li>
+        </ul>
+      </nav>
+
+      <article class="section" aria-label="Event workflow">
+        <h2 id="config">Config</h2>
+        <p>
+          Before anyone walks in, set the event name, location, dates, and logo.
+          Choose how many judges sit a performance, schedule breaks, decide
+          whether the judging team rotates, and tick the kata this event will
+          run. You can also set an organiser PIN, create public links for tablets
+          and displays, and choose how long each kata stays on a rotating results
+          screen.
+        </p>
+        <p>
+          Event rules live here too. Pick
+          <a href="/scoring/">EJU, kata-judge/BJA-style, or IJF scoring</a>
+          independently from the current or IJF competition formula.
+          Nationality policy controls how the draw prefers judges from outside
+          the pair's countries, while optional Senior and U23 registration rules
+          turn on the corresponding age, grade, division, and entry checks.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Config.png"
+            alt="Config page showing IJF scoring, IJF competition formula, hard judge nationality policy, and Senior and U23 registration rules"
+            loading="lazy"
+            width="1046"
+            height="1721"
+          />
+          <figcaption>Event scoring, draw, and registration controls</figcaption>
+        </figure>
+
+        <h2 id="competitors">Competitors</h2>
+        <p>
+          Register competitors through the web UI, CSV import, or from this year's
+          IJF kata events on Judobase. The CSV header starts with
+          <code>"Country","Given Name","Surname"</code> and can include
+          <code>"Birth Year","Grade"</code>. Judobase import adds people and
+          skips anyone already in this event with the same name and country.
+        </p>
+        <p>
+          When Senior or U23 registration rules are switched on, birth year and
+          grade become required and invalid entries are blocked before they
+          reach the draw. Judobase cannot supply those two fields, so leave
+          registration checks off for that import, or enter competitors
+          manually or by CSV.
+        </p>
+        <p>
+          Senior requires both partners to be at least 16 and 1st Dan, with one
+          Senior pair per person. U23 requires both to be 16–22 and at least 1st
+          Kyu, allows Nage-no-Kata, Ju-no-Kata, or Katame-no-Kata, and permits
+          up to two U23 pairs per person. Leave the setting off for ordinary
+          club-event entry.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Competitors-Kata.png"
+            alt="Competitors page listing country, name, birth year, and grade"
+            loading="lazy"
+            width="1046"
+            height="735"
+          />
+          <figcaption
+            >Competitor details used for optional eligibility checks</figcaption
+          >
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/Import-IJF.png"
+            alt="Import from IJF event page listing this year’s Judobase kata championships with an Import button per event"
+            loading="lazy"
+            width="1046"
+            height="1037"
+          />
+          <figcaption>Import competitors from an IJF event</figcaption>
+        </figure>
+
+        <h2 id="pairs">Pairs</h2>
+        <p>
+          Form tori and uke pairs for each kata. When registration checks are
+          on, choose Senior or U23 for the pair; the application checks both
+          partners' calendar-year age and grade, the permitted kata, and the
+          entry limit for that division.
+        </p>
+        <p>
+          You can also give previous medallists an optional seed rank. In a
+          two-group preliminary, the draw spreads those heads of series across
+          the groups while keeping performance order within each group random.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Pairs-Kata.png"
+            alt="Pairs page listing tori and uke, kata, Senior or U23 division, and seed rank"
+            loading="lazy"
+            width="1046"
+            height="816"
+          />
+          <figcaption>Pair divisions and heads of series</figcaption>
+        </figure>
+
+        <h2 id="judges">Judges</h2>
+        <p>
+          Add judges per kata, or import them from CSV with
+          <code>"Country","Given Name","Surname","Kata"</code> (use the kata
+          code, for example <code>nagenokata</code>). You need at least the
+          number of judges per performance selected in Config.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Judges-Kata.png"
+            alt="Judges page listing judges and the kata they are judging"
+            loading="lazy"
+            width="1046"
+            height="874"
+          />
+          <figcaption>Judges page</figcaption>
+        </figure>
+
+        <h2 id="draw">Draw</h2>
+        <p>
+          Run an automated draw for performance order and seated panels. You can
+          keep the current formula — up to 6 pairs go straight to a final, 7–11
+          use one preliminary with the top 4 advancing, and 12 or more use two
+          groups with the top 3 from each — or select the IJF formula: up to 6
+          direct, 7–9 with the top 6 advancing, and 10 or more in two groups with
+          the top 3 from each.
+        </p>
+        <p>
+          Seed ranks are used only to spread heads of series across two
+          preliminary groups; order within a group remains random. When judges
+          are seated automatically, the configured nationality policy prefers
+          officials who do not share tori or uke's IOC country. Running the draw
+          again overwrites that kata's order, with an optional wipe when you
+          also need to remove scores already entered.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Draw.png"
+            alt="Draw page for Nage-no-Kata with run-draw controls"
+            loading="lazy"
+            width="1046"
+            height="761"
+          />
+          <figcaption>Performance draw</figcaption>
+        </figure>
+
+        <h2 id="mats">Mats</h2>
+        <p>
+          Add a tatami, then assign performances in the order you want them to
+          run — or assign several and randomize unfinished while the current
+          pair stays put. The PIN-protected mat clerk acts as the event-day
+          supervisor, showing who is scoring now, who is on deck and double
+          deck, completed performances, judge seats, and links to edit scores.
+        </p>
+        <p>
+          If an official judge shares tori or uke's IOC country, the clerk sees
+          a warning and can choose an eligible replacement for this performance
+          only. A seat with submitted or saved scores must be unsubmitted first.
+          Shadow seats remain available for judge development and do not count
+          in either the total or the nationality rule.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Mats-Clerk.png"
+            alt="Mat clerk and supervisor page showing a judge nationality conflict and eligible replacement control"
+            loading="lazy"
+            width="1046"
+            height="1520"
+          />
+          <figcaption>Mat supervisor nationality warning and replacement</figcaption>
+        </figure>
+
+        <h2 id="tablets">Judge tablets</h2>
+        <p>
+          Each seat URL is one named judge. The tablet shows the seat, the
+          judge’s name, the kata, and tori and uke. For every technique, tap
+          small (S), medium (M), big (B), forgotten (F), and +/− correction.
+          Each tap is saved immediately — overview progress, live results, and
+          leaderboards update with provisional scores and an in-progress
+          marker. Submit once the kata is finished — you will be asked to
+          confirm — to lock that seat. After submit the seat waits until the
+          other official seats submit, then the mat advances. The tablet
+          updates in place when the mat changes. Tablets have dark/light and
+          zoom controls, and they hide the clerk navigation so judges do not
+          wander off.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Judge-Tablet.png"
+            alt="Judge tablet for seat 2 showing the named judge, tori and uke, and technique scoring grid with S M B F and plus minus controls"
+            loading="lazy"
+            width="1046"
+            height="1576"
+          />
+          <figcaption>Judge tablet seat</figcaption>
+        </figure>
+
+        <h2 id="announcer">Announcer</h2>
+        <p>
+          Open the announcer board on a hall screen. It shows the current tori
+          and uke, the judging team, who is on deck with an estimated time, then
+          the rest of the mat schedule. It updates in place. Same dark, zoom,
+          and English/French flags as live results. No clerk menu.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Announcer.png"
+            alt="Announcer board for Tatami 1 with current tori and uke, judging team, on-deck pair, and later schedule including a break"
+            loading="lazy"
+            width="1046"
+            height="654"
+          />
+          <figcaption>Announcer board</figcaption>
+        </figure>
+
+        <h2 id="scoresheets">Electronic scoresheets</h2>
+        <p>
+          If a phone fails, the clerk scoresheets write the same scores. Open
+          scoresheets, then kata, pair, and judge. The pair page lists the
+          judges seated for that performance. Use +/− on each mistake column.
+          The page total is that judge’s kata score.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Scoresheet-Kata-Pair-Judge.png"
+            alt="Clerk scoresheet for a pair and judge with technique rows and mistake plus-minus controls"
+            loading="lazy"
+            width="1046"
+            height="1585"
+          />
+          <figcaption>Electronic scoresheet in the browser</figcaption>
+        </figure>
+
+        <h2 id="pdf">Printable PDF pack</h2>
+        <p>
+          Download a pack for one kata or the whole day. Choose blank, in
+          progress, completed, or all sheets. Force blank layout if you need
+          empty paper after scoring has started. Each pack includes a cover, a
+          divider per kata, performance order, results, and a pair×judge
+          scoresheet with a checkbox grid, totals, judge and data-entry
+          signature blocks, and the event logo in the header.
+        </p>
+        <div class="pdf-gallery">
+          <figure>
+            <img
+              src="/screenshots/PDF-Cover.png"
+              alt="PDF cover page titled Full day scoresheet pack listing included kata"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Day-pack cover</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Divider.png"
+              alt="PDF kata section divider page with a large kata title"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Kata divider</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Order.png"
+              alt="PDF performance order page listing pairs and judging teams"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Performance order</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Results.png"
+              alt="PDF results page with rank, nations, pair, and points columns"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Results page</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Scoresheet.png"
+              alt="Printed PDF scoresheet with event header, pair and judge details, mistake checkbox grid, total, and signature boxes"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Pair×judge scoresheet</figcaption>
+          </figure>
+        </div>
+
+        <h2 id="live-results">Live results</h2>
+        <p>
+          Project the ranking on a hall screen — large type, no clerk menu.
+          Scores update in place as judges tap, including provisional points
+          while a pair is still being scored, with an in-progress marker and
+          progress %. Open <code>/results?rotate=1</code> to loop through kata;
+          how long each stays on screen is set in Config. Switch language with
+          <code>?lang=en</code> or <code>fr</code>; use
+          <code>?theme=dark</code> and <code>?zoom=</code> like the tablets.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Live-Results.png"
+            alt="Live results display for Nage-no-Kata showing ranked pairs, points, and an in-progress marker on a pair still being scored"
+            loading="lazy"
+            width="1046"
+            height="654"
+          />
+          <figcaption>Live results display</figcaption>
+        </figure>
+
+        <h2 id="leaderboards">Leaderboards and CSV</h2>
+        <p>
+          Leaderboards are the same ranking for the clerk, including
+          provisional totals and the in-progress marker while a panel is still
+          scoring. Download totals CSV (rank, country, pair, points) and
+          techniques CSV (per judge, per technique).
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Leaderboard-Kata.png"
+            alt="Leaderboard page ranking pairs by total score with CSV download links and an in-progress marker"
+            loading="lazy"
+            width="1046"
+            height="654"
+          />
+          <figcaption>Leaderboard page</figcaption>
+        </figure>
+
+        <h2 id="audit">Scoring audit</h2>
+        <p>
+          Under Admin, the scoring audit log records tablet taps, submits, and
+          unsubmits. Filter by mat, performance, seat, action, judge, or time
+          if you need to see what was marked and when.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Scoring-Audit.png"
+            alt="Admin scoring audit log with filters for mat, seat, action, and judge, and a table of recent score draft updates"
+            loading="lazy"
+            width="1046"
+            height="899"
+          />
+          <figcaption>Scoring audit log</figcaption>
+        </figure>
+
+        <h2 id="progress">Category progress</h2>
+        <p>
+          A summary view shows how far the category has progressed — useful for
+          medals, announcements, and keeping the mat schedule moving.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Kata.png"
+            alt="Kata category summary showing completion progress"
+            loading="lazy"
+            width="1046"
+            height="1097"
+          />
+          <figcaption>Category progress summary</figcaption>
+        </figure>
+
+      </article>
+      <section class="section" aria-labelledby="deploy">
+        <h2 id="deploy">Runs where you need it</h2>
+        <ul>
+          <li>
+            Access everything through a web browser — no special client install
+            for tableside users
+          </li>
+          <li>
+            Run on a primary machine at the venue; use a local network when
+            multiple devices need access
+          </li>
+          <li>
+            Start with <code>./script/start</code> so one worker keeps judge
+            tablets, the announcer, and live results in sync. If a live
+            connection drops, those pages also reload every five seconds
+          </li>
+          <li>Each event uses its own SQLite database file</li>
+          <li>Optional Docker packaging for consistent deployment</li>
+          <li>
+            Organiser PIN protects clerk pages (competitors, judges, pairs,
+            scoresheets, draw, config, mats clerk, leaderboards, scoring
+            audit). Results, announcer, judge seats, and schedule stay
+            reachable on the LAN
+          </li>
+          <li>
+            A public token gives <code>/p/…</code> links for tablets, announcer,
+            and results without the PIN
+          </li>
+          <li>
+            Live screens support English and French
+          </li>
+          <li>
+            Built with Perl, Mojolicious, SQLite, and AlmondCSS; licensed under
+            the AGPL
+          </li>
+        </ul>
+
+        <figure>
+          <img
+            src="/KataSoftware-Container.png"
+            alt="Container diagram of the Judo Kata Tournament Manager system components"
+            loading="lazy"
+            width="1046"
+            height="541"
+          />
+          <figcaption>System overview</figcaption>
+        </figure>
+
+      </section>
+      <p class="section-cta">
+        <a href="mailto:lw@judocoach.com?subject=Kata%20Tournament%20Manager%20demo">Email Lance for a demo or test event</a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/scoring/">Scoring</a></li>
+          <li><a href="/on-site/">On-site support</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+      <p>
+        © 2022–2026
+        <a href="/about/">Lance Wicks</a>
+        ·
+        <a href="mailto:lw@judocoach.com">lw@judocoach.com</a>
+      </p>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox">
+      <button type="button" class="lightbox-close" aria-label="Close">
+        ×
+      </button>
+      <img id="lightbox-img" alt="" />
+    </dialog>
+    <script src="/js/lightbox.js" defer></script>
+  </body>
+</html>

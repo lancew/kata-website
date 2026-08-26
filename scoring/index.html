@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Lance Wicks" />
+    <meta name="copyright" content="Lance Wicks" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Judo Kata Tournament Manager" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="https://katajudo.com/og-image.png" />
+    <meta property="og:image:alt" content="Judo Kata Tournament Manager" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://katajudo.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Judo Kata Tournament Manager" />
+    <link rel="stylesheet" href="/css/almond.css" />
+    <link rel="stylesheet" href="/css/kata.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Scoring rulesets | Judo Kata Tournament Manager</title>
+    <meta name="description" content="EJU, kata-judge/BJA-style, and IJF scoring in Judo Kata Tournament Manager — forgotten techniques, drop rules, tie-breaks, and supported kata." />
+    <link rel="canonical" href="https://katajudo.com/scoring/" />
+    <meta property="og:url" content="https://katajudo.com/scoring/" />
+    <meta property="og:title" content="Scoring rulesets | Judo Kata Tournament Manager" />
+    <meta property="og:description" content="EJU, kata-judge/BJA-style, and IJF scoring in Judo Kata Tournament Manager — forgotten techniques, drop rules, tie-breaks, and supported kata." />
+    <meta name="twitter:title" content="Scoring rulesets | Judo Kata Tournament Manager" />
+    <meta name="twitter:description" content="EJU, kata-judge/BJA-style, and IJF scoring in Judo Kata Tournament Manager — forgotten techniques, drop rules, tie-breaks, and supported kata." />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://katajudo.com/#website",
+      "name": "Judo Kata Tournament Manager",
+      "url": "https://katajudo.com/",
+      "description": "Browser-based software to organise, score, and display judo kata competitions from one laptop on the local network.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://katajudo.com/#author"
+      },
+      "mainEntity": {
+        "@id": "https://katajudo.com/#app"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://katajudo.com/#author",
+      "name": "Lance Wicks",
+      "email": "lw@judocoach.com",
+      "url": "https://katajudo.com/about/",
+      "sameAs": [
+        "https://github.com/lancew",
+        "https://www.linkedin.com/in/lancew",
+        "https://perl.kiwi/typing"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://katajudo.com/#app",
+      "name": "Judo Kata Tournament Manager",
+      "url": "https://katajudo.com/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://katajudo.com/scoring/#webpage",
+      "url": "https://katajudo.com/scoring/",
+      "name": "Scoring rulesets | Judo Kata Tournament Manager",
+      "description": "EJU, kata-judge/BJA-style, and IJF scoring in Judo Kata Tournament Manager — forgotten techniques, drop rules, tie-breaks, and supported kata.",
+      "isPartOf": {
+        "@id": "https://katajudo.com/#website"
+      },
+      "about": {
+        "@id": "https://katajudo.com/#app"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://katajudo.com/og-image.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://katajudo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Scoring",
+          "item": "https://katajudo.com/scoring/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <p class="site-brand"><a href="/">Judo Kata Tournament Manager</a></p>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/scoring/" aria-current="page">Scoring</a></li>
+          <li><a href="/on-site/">On-site</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="mailto:lw@judocoach.com?subject=Kata%20Tournament%20Manager%20demo">Get a demo</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/scoring/" aria-current="page">Scoring</a></li>
+        </ol>
+      </nav>
+
+      <header class="hero">
+        <h1>Scoring you can trust</h1>
+        <p class="lede">
+          Scoring follows the ruleset you choose in
+          <a href="/how-it-works/#config">Config</a>, so the same tablet marks
+          produce the expected event total without rebuilding a spreadsheet at
+          the venue.
+        </p>
+        <p>
+          The system has been tested against the senior categories of the
+          <a
+            href="https://sites.google.com/view/silesian-kata/silesian-open-judo-kata"
+            rel="noopener noreferrer"
+            >2024 Silesian Open Judo Kata Competition</a
+          >.
+        </p>
+      </header>
+      <nav class="inpage-nav" aria-label="On this page">
+        <ul>
+          <li><a href="#eju">EJU</a></li>
+          <li><a href="#bja">kata-judge / BJA-style</a></li>
+          <li><a href="#ijf">IJF</a></li>
+          <li><a href="#marks">Marks and tie-breaks</a></li>
+          <li><a href="#kata">Supported kata</a></li>
+        </ul>
+      </nav>
+
+      <section class="section" aria-labelledby="eju">
+        <h2 id="eju">EJU</h2>
+        <p>
+          EJU drops the highest and lowest judge totals when there are three or
+          more official judges. A forgotten technique zeroes that technique and
+          halves that judge's kata total once, rounded up.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="bja">
+        <h2 id="bja">kata-judge / BJA-style</h2>
+        <p>
+          kata-judge/BJA-style scoring discards per technique, keeps ordinary
+          scores between 1 and 10, and halves without rounding up.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="ijf">
+        <h2 id="ijf">IJF</h2>
+        <p>
+          IJF also discards per technique: five official judges drop high and
+          low, four drop low, and three or fewer keep every mark. IJF uses the
+          EJU technique range, including a possible 10.5 correction, and any
+          official forgotten mark halves the pair total once.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="marks">
+        <h2 id="marks">Marks and tie-breaks</h2>
+        <p>
+          Shadow seats never count in any ruleset.
+        </p>
+        <ul>
+          <li>
+            Technique evaluation uses small, medium, and big mistakes, forgotten
+            techniques, and optional correction values
+          </li>
+          <li>
+            Tie-breaks use fewer big mistakes, then medium, then small, then
+            average score
+          </li>
+        </ul>
+        <p>
+          How those marks are entered on the day is on
+          <a href="/how-it-works/#tablets">judge tablets</a> and
+          <a href="/how-it-works/#scoresheets">electronic scoresheets</a>.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="kata">
+        <h2 id="kata">Supported kata</h2>
+        <ul>
+          <li>Nage-no-Kata (including 1G, 2G, 3G, and 3-set)</li>
+          <li>Katame-no-Kata (including 1G)</li>
+          <li>Ju-no-Kata</li>
+          <li>Kime-no-Kata</li>
+          <li>Kodokan Goshin Jutsu</li>
+          <li>Koshiki-no-Kata</li>
+          <li>Itsutsu-no-Kata</li>
+          <li>Kodomo-no-Kata 1–7</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="reading-heading">
+        <h2 id="reading-heading">Further reading</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.kodokanjudoinstitute.org/en/waza/forms/"
+              rel="noopener noreferrer"
+              >Kodokan kata pages</a
+            >
+            — definitive documentation on judo kata
+          </li>
+          <li>
+            <a
+              href="https://www.ijf.org/ijf/documents/19"
+              rel="noopener noreferrer"
+              >IJF Kata Commission documents</a
+            >
+            — International Judo Federation kata materials
+          </li>
+          <li>
+            <a
+              href="https://sites.google.com/site/katascoresheets/"
+              rel="noopener noreferrer"
+              >Kata Scoresheets (EJU)</a
+            >
+            — Michel Kozlowski’s Excel-based scoring software
+          </li>
+        </ul>
+      </section>
+
+      <p class="section-cta">
+        <a href="mailto:lw@judocoach.com?subject=Kata%20Tournament%20Manager%20demo">Email Lance for a demo or test event</a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/scoring/">Scoring</a></li>
+          <li><a href="/on-site/">On-site support</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+      <p>
+        © 2022–2026
+        <a href="/about/">Lance Wicks</a>
+        ·
+        <a href="mailto:lw@judocoach.com">lw@judocoach.com</a>
+      </p>
+    </footer>
+
+  </body>
+</html>
