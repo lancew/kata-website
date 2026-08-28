@@ -149,6 +149,7 @@
           <li><a href="#pairs">Pairs</a></li>
           <li><a href="#judges">Judges</a></li>
           <li><a href="#draw">Draw</a></li>
+          <li><a href="#final-round">Prelim to final</a></li>
           <li><a href="#mats">Mats</a></li>
           <li><a href="#tablets">Judge tablets</a></li>
           <li><a href="#announcer">Announcer</a></li>
@@ -294,15 +295,68 @@
           again overwrites that kata's order, with an optional wipe when you
           also need to remove scores already entered.
         </p>
+        <p>
+          When the formula uses one or two preliminary rounds, a
+          <strong>Start final</strong> button appears on the draw page once
+          every prelim pair is complete. Direct finals of six or fewer pairs
+          skip this — there is only one round.
+        </p>
         <figure>
           <img
-            src="/screenshots/Draw.png"
-            alt="Draw page for Nage-no-Kata with run-draw controls"
+            src="/screenshots/Draw-Start-Final.png"
+            alt="Draw page for Nage-no-Kata showing judge blocks for performances 1–5, 6–10, and 11–12, with Start final ready after prelims are scored"
             loading="lazy"
             width="1046"
-            height="761"
+            height="1644"
           />
-          <figcaption>Performance draw</figcaption>
+          <figcaption>Draw with judge blocks and Start final</figcaption>
+        </figure>
+
+        <h2 id="final-round">Prelim to final</h2>
+        <p>
+          After prelims, the clerk starts the final from the draw page. The
+          system picks the advancers from prelim scores only, re-randomises
+          their performance order, re-seats the judges, and switches live mats,
+          tablets, and the hall board to the final queue. Prelim draw, scores,
+          and mat history stay untouched.
+        </p>
+        <p>
+          Medal totals come from the final round only. The hall results screen
+          shows <strong>Final</strong> as the formula kicker and lists the six
+          (or four) finalists without an Advances column. The clerk leaderboard
+          keeps Preliminary and Final tabs so you can still read who qualified
+          and who was cut. If no final scores have been entered yet, you can
+          undo the switch from the draw page.
+        </p>
+        <figure>
+          <img
+            src="/screenshots/Draw-Final.png"
+            alt="Draw page after Start final, with Re-randomise the Final controls and Undo final"
+            loading="lazy"
+            width="1046"
+            height="1644"
+          />
+          <figcaption>Final draw with Undo final</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/Live-Results-Prelims.png"
+            alt="Hall results for Nage-no-Kata during prelims showing twelve pairs, an Advances column, and the formula Two preliminaries (top 3 per group)"
+            loading="lazy"
+            width="1046"
+            height="588"
+          />
+          <figcaption>Prelim results on the hall screen</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/screenshots/Live-Results-Final.png"
+            alt="Hall results after the final has started, showing six finalists ranked by final points and the formula Final"
+            loading="lazy"
+            width="1046"
+            height="588"
+          />
+          <figcaption>Final results on the hall screen</figcaption>
         </figure>
 
         <h2 id="mats">Mats</h2>
@@ -401,6 +455,13 @@
           scoresheet with a checkbox grid, totals, judge and data-entry
           signature blocks, and the event logo in the header.
         </p>
+        <p>
+          Large fields paginate order and results across extra A4 pages so
+          every pair appears. After the final has started, a single-kata
+          download adds a second block labelled <strong>Preliminary</strong>
+          then <strong>Final</strong> — each with its own order, results, and
+          scoresheets — in one file.
+        </p>
         <div class="pdf-gallery">
           <figure>
             <img
@@ -452,6 +513,46 @@
             />
             <figcaption>Pair×judge scoresheet</figcaption>
           </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Prelim-Order.png"
+              alt="PDF page titled Nage No Kata - Preliminary - Performance order listing twelve pairs and judging teams"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Preliminary performance order</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Prelim-Results.png"
+              alt="PDF page titled Nage No Kata - Preliminary - Results with rank, nations, pair, and points for twelve pairs"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Preliminary results</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Final-Order.png"
+              alt="PDF page titled Nage No Kata - Final - Performance order listing six finalists and judging teams"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Final performance order</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/PDF-Final-Results.png"
+              alt="PDF page titled Nage No Kata - Final - Results ranking six finalists by final points"
+              loading="lazy"
+              width="1046"
+              height="1480"
+            />
+            <figcaption>Final results</figcaption>
+          </figure>
         </div>
 
         <h2 id="live-results">Live results</h2>
@@ -459,18 +560,25 @@
           Project the ranking on a hall screen — large type, no clerk menu.
           Scores update in place as judges tap, including provisional points
           while a pair is still being scored, with an in-progress marker and
-          progress %. Open <code>/results?rotate=1</code> to loop through kata;
-          how long each stays on screen is set in Config. Switch language with
+          progress %. The table scales to fit every row on a 1080p projector
+          from rank 1, so a large preliminary field stays readable without
+          scrolling. Small direct finals keep the jumbo type. During prelims
+          the Advances column shows who would qualify; it hides on direct
+          finals and after the final has started.
+        </p>
+        <p>
+          Open <code>/results?rotate=1</code> to loop through kata; how long
+          each stays on screen is set in Config. Switch language with
           <code>?lang=en</code> or <code>fr</code>; use
           <code>?theme=dark</code> and <code>?zoom=</code> like the tablets.
         </p>
         <figure>
           <img
             src="/screenshots/Live-Results.png"
-            alt="Live results display for Nage-no-Kata showing ranked pairs, points, and an in-progress marker on a pair still being scored"
+            alt="Live results display for Nage-no-Kata during two preliminaries showing twelve ranked pairs with an Advances column"
             loading="lazy"
             width="1046"
-            height="654"
+            height="588"
           />
           <figcaption>Live results display</figcaption>
         </figure>
@@ -479,19 +587,33 @@
         <p>
           Leaderboards are the same ranking for the clerk, including
           provisional totals and the in-progress marker while a panel is still
-          scoring. Download totals CSV (rank, country, pair, points) and
-          techniques CSV (per judge, per technique).
+          scoring. After the final has started, switch between Preliminary and
+          Final tabs; the prelim view keeps the Advances column. Download
+          totals CSV (rank, country, pair, points) and techniques CSV (per
+          judge, per technique) for the round you are viewing.
         </p>
-        <figure>
-          <img
-            src="/screenshots/Leaderboard-Kata.png"
-            alt="Leaderboard page ranking pairs by total score with CSV download links and an in-progress marker"
-            loading="lazy"
-            width="1046"
-            height="654"
-          />
-          <figcaption>Leaderboard page</figcaption>
-        </figure>
+        <div class="pdf-gallery">
+          <figure>
+            <img
+              src="/screenshots/Leaderboard-Prelim.png"
+              alt="Clerk leaderboard on the Preliminary tab showing twelve pairs ranked with an Advances column"
+              loading="lazy"
+              width="1046"
+              height="1644"
+            />
+            <figcaption>Preliminary leaderboard</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/screenshots/Leaderboard-Final.png"
+              alt="Clerk leaderboard on the Final tab showing six finalists ranked by final points"
+              loading="lazy"
+              width="1046"
+              height="1046"
+            />
+            <figcaption>Final leaderboard</figcaption>
+          </figure>
+        </div>
 
         <h2 id="audit">Scoring audit</h2>
         <p>
