@@ -169,9 +169,10 @@
           Before anyone walks in, set the event name, location, dates, and logo.
           Choose how many judges sit a performance, schedule breaks, decide
           whether the judging team rotates, and tick the kata this event will
-          run. You can also set an organiser PIN, create public links for tablets
-          and displays, and choose how long each kata stays on a rotating results
-          screen.
+          run.           You can also set an organiser PIN, create public links for tablets
+          and displays, choose how long each kata stays on a rotating results
+          screen, and pick the live-screen language — English, French, or
+          German — remembered for each browser session.
         </p>
         <p>
           Event rules live here too. Pick
@@ -246,8 +247,9 @@
         </p>
         <p>
           You can also give previous medallists an optional seed rank. In a
-          two-group preliminary, the draw spreads those heads of series across
-          the groups while keeping performance order within each group random.
+          two-group preliminary the draw spreads the seeds across the groups,
+          but in performance order the unseeded pairs are shuffled first and
+          the seeded pairs go last, so seed #1 performs last.
         </p>
         <figure>
           <img
@@ -257,7 +259,7 @@
             width="1046"
             height="816"
           />
-          <figcaption>Pair divisions and heads of series</figcaption>
+          <figcaption>Pair divisions and seed ranks</figcaption>
         </figure>
 
         <h2 id="judges">Judges</h2>
@@ -288,12 +290,20 @@
           the top 3 from each.
         </p>
         <p>
-          Seed ranks are used only to spread heads of series across two
-          preliminary groups; order within a group remains random. When judges
+          Unseeded pairs are shuffled first; seeded pairs are placed last in
+          performance order, so seed #1 performs last. In a two-group
+          preliminary the seeds are also spread across the groups. When judges
           are seated automatically, the configured nationality policy prefers
           officials who do not share tori or uke's IOC country. Running the draw
           again overwrites that kata's order, with an optional wipe when you
           also need to remove scores already entered.
+        </p>
+        <p>
+          Run the draw in front of the field with the ceremony console: the
+          hall display for the projector shows the title page, field briefing,
+          and overview, then animates each kata's draw live over SSE. Ceremony
+          draws are saved like any other, the console can jump between kata,
+          and the hall sound can be muted from there.
         </p>
         <p>
           When the formula uses one or two preliminary rounds, a
@@ -362,10 +372,12 @@
         <h2 id="mats">Mats</h2>
         <p>
           Add a tatami, then assign performances in the order you want them to
-          run — or assign several and randomize unfinished while the current
-          pair stays put. The PIN-protected mat clerk acts as the event-day
-          supervisor, showing who is scoring now, who is on deck and double
-          deck, completed performances, judge seats, and links to edit scores.
+          run. Performances can be unassigned again or moved between mats on
+          the schedule page, where you can also set the mat start time. The
+          clerk page shows a panel for every tatami. The PIN-protected mat
+          clerk acts as the event-day supervisor, showing who is scoring now,
+          who is on deck and double deck, completed performances, judge seats,
+          and links to edit scores.
         </p>
         <p>
           If an official judge shares tori or uke's IOC country, the clerk sees
@@ -415,7 +427,7 @@
           Open the announcer board on a hall screen. It shows the current tori
           and uke, the judging team, who is on deck with an estimated time, then
           the rest of the mat schedule. It updates in place. Same dark, zoom,
-          and English/French flags as live results. No clerk menu.
+          and language handling as live results. No clerk menu.
         </p>
         <figure>
           <img
@@ -568,8 +580,8 @@
         </p>
         <p>
           Open <code>/results?rotate=1</code> to loop through kata; how long
-          each stays on screen is set in Config. Switch language with
-          <code>?lang=en</code> or <code>fr</code>; use
+          each stays on screen is set in Config. Language is picked in Config
+          and remembered for the browser session; use
           <code>?theme=dark</code> and <code>?zoom=</code> like the tablets.
         </p>
         <figure>
@@ -589,8 +601,9 @@
           provisional totals and the in-progress marker while a panel is still
           scoring. After the final has started, switch between Preliminary and
           Final tabs; the prelim view keeps the Advances column. Download
-          totals CSV (rank, country, pair, points) and techniques CSV (per
-          judge, per technique) for the round you are viewing.
+          per-kata totals CSV (rank, country, pair, points) and
+          technique-level CSV (per judge, per technique) for the round you are
+          viewing.
         </p>
         <div class="pdf-gallery">
           <figure>
@@ -678,7 +691,7 @@
             and results without the PIN
           </li>
           <li>
-            Live screens support English and French
+            Live screens support English, French, and German
           </li>
           <li>
             Built with Perl, Mojolicious, SQLite, and AlmondCSS; licensed under
