@@ -203,6 +203,23 @@ figure img {
   border-left: 4px solid #333;
 }
 
+.steps {
+  padding-left: 1.25rem;
+}
+
+.steps li {
+  margin: 0.4rem 0;
+}
+
+.faq details {
+  margin: 0.75rem 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 .memorial img {
   max-width: 16rem;
   height: auto;
