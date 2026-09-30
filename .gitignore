@@ -1,0 +1,2 @@
+# Large downloadable archives must not be committed to the published site root.
+/kata-*.zip
