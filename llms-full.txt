@@ -1,0 +1,118 @@
+# Judo Kata Tournament Manager — full context
+
+Source: https://katajudo.com/
+Last updated: 30 September 2026
+
+## What it is
+
+Judo Kata Tournament Manager is browser-based software that runs an entire judo
+kata competition from one laptop on the venue's local network. The laptop acts as
+the server; clerks, judge tablets, the announcer, and hall displays use any
+browser on the same LAN. It needs no internet connection and no account.
+
+It is free and open source under the AGPL-3.0 licence, with no subscription and
+no per-event fee. Built by Lance Wicks, a member of the IJF and EJU IT teams.
+Validated against the senior categories of the 2024 Silesian Open Judo Kata
+Competition. Dedicated to the memory of Michel Kozlowski, whose Excel Kata
+Scoresheets (EJU) remain a reference for many organisers.
+
+## What it does
+
+- Config: event name, location, dates, logo, judges per performance, breaks,
+  judging rotation, included kata, organiser PIN, public links, rotating results
+  timing, and live-screen language (English, French, German)
+- Competitors: add by hand, import from CSV, or import this year's IJF Judobase
+  kata entries; optional Senior and U23 registration checks
+- Pairs: form tori/uke pairs, assign division, optional seed ranks
+- Judges: add per kata, or import from CSV
+- Draw: automated draw for performance order and seated panels, with seed
+  spreading, nationality-preference policy, and a ceremony console
+- Prelim to final: clerk-started final that re-randomises advancers, re-seats
+  judges, and switches mats, tablets, and the hall board; medal totals come from
+  the final only
+- Mats: assign performances to tatami, mat clerk supervisor with nationality
+  warnings, eligible replacements, and double-deck
+- Judge tablets: named seat URLs with small/medium/big, forgotten, and +/-
+  corrections; each tap is saved immediately; submit and unsubmit; shadow seats
+- Electronic scoresheets: browser fallback for the clerk if a tablet fails
+- Printable PDF packs: cover, kata divider, performance order, results, and
+  pair-by-judge scoresheets, with signature blocks
+- Live results: large-type hall display with provisional points and an
+  in-progress marker; scales to fit every row on a 1080p projector; optional
+  rotation through kata
+- Announcer board: current tori and uke, judging team, on-deck pair, schedule
+- Leaderboards and CSV: per-kata totals CSV and technique-level CSV
+- Award ceremony: animated hall display controlled from a tablet
+- Scoring audit: log of tablet taps, submits, and unsubmits, filterable
+- Deployment: runs on a primary machine at the venue; optional Docker packaging;
+  each event is a single SQLite file; organiser PIN protects clerk pages; public
+  token gives /p/... links for tablets, announcer, and results
+
+## Scoring rulesets
+
+Choose one in Config; the same tablet marks produce the event total.
+
+- EJU: drops the highest and lowest judge totals with three or more judges; a
+  forgotten technique zeroes that technique and halves that judge's total once,
+  rounded up.
+- kata-judge/BJA-style: discards per technique; scores stay between 1 and 10;
+  halves without rounding up.
+- IJF: discards per technique — five judges drop high and low, four drop low,
+  three or fewer keep every mark; a forgotten mark halves the pair total once.
+- Tie-breaks: fewer big mistakes, then medium, then small, then average score.
+- Shadow judge seats are stored but never counted.
+
+## Supported kata
+
+Nage-no-Kata (including 1G, 2G, 3G, 3-set), Katame-no-Kata (including 1G),
+Ju-no-Kata, Kime-no-Kata, Kodokan Goshin Jutsu, Koshiki-no-Kata,
+Itsutsu-no-Kata, and Kodomo-no-Kata 1-7.
+
+## Comparisons
+
+This project is free, open-source (AGPL) software that runs an entire judo kata
+competition from one laptop on the venue LAN with no internet.
+
+- Judo Kata Judge (https://kata-judge.judowaza.org/) is an open-source (AGPL)
+  IJF-ruleset kata judging web app that stores data in Azure Cosmos DB (cloud).
+- Michel Kozlowski's Excel "Kata Scoresheets (EJU)"
+  (https://sites.google.com/site/katascoresheets/) is the spreadsheet many EJU
+  organisers use; this project follows it and is dedicated to his memory.
+- Kata Manager, part of Vader Consulting's Judo toolkit
+  (https://github.com/VaderConsulting/Judo, MIT), offers kata scorecards in a
+  Windows-only collection of club and event tools.
+
+Full comparisons: https://katajudo.com/alternatives/ and
+https://katajudo.com/compare/
+
+## Pricing
+
+- Software: free (£0, AGPL-3.0). No subscription, no per-event fee.
+- On-site support: £100 per day (including travel days), plus accommodation,
+  meals, travel, and any hardware agreed in advance.
+- Posted kit: a pre-configured Raspberry Pi with the system installed, quoted
+  per event.
+- Full hardware supply: judge tablets, projector(s), server, and network kit,
+  quoted on requirements.
+- Full pricing: https://katajudo.com/pricing.md
+
+## Availability
+
+No public download yet. Demos and supervised test events are open now.
+
+## Contact
+
+Lance Wicks — lw@judocoach.com
+Email your event date, kata, and rough pair count for a demo, test event, or quote.
+
+## Pages
+
+- Home: https://katajudo.com/
+- How an event runs: https://katajudo.com/how-it-works/
+- Scoring rulesets: https://katajudo.com/scoring/
+- On-site support: https://katajudo.com/on-site/
+- About: https://katajudo.com/about/
+- Kata scoring software compared: https://katajudo.com/alternatives/
+- Alternative to Excel kata scoresheets: https://katajudo.com/alternatives/kata-scoresheets-excel/
+- Compare: https://katajudo.com/compare/
+- vs Judo Kata Judge: https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/

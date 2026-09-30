@@ -9,6 +9,8 @@ board. It is built for kata organisers, judges, and competition officials. It is
 free and open source (AGPL-3.0) and works entirely offline on the venue's local
 network — no cloud service and no account.
 
+Full context (llms-full.txt): https://katajudo.com/llms-full.txt
+
 ## Key facts
 
 - Free and open source (AGPL-3.0). No subscription, no per-event fee.
