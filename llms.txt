@@ -35,6 +35,24 @@ network — no cloud service and no account.
 - Scoring rulesets: https://katajudo.com/scoring/
 - On-site support: https://katajudo.com/on-site/
 - About: https://katajudo.com/about/
+- Kata scoring software compared: https://katajudo.com/alternatives/
+- Alternative to Excel kata scoresheets: https://katajudo.com/alternatives/kata-scoresheets-excel/
+- Compare: https://katajudo.com/compare/
+- vs Judo Kata Judge: https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/
+
+## Comparisons
+
+Judo Kata Tournament Manager is free, open-source (AGPL) software that runs an
+entire judo kata competition from one laptop on the venue LAN with no internet.
+It covers the draw, named judge tablets, live hall results, the announcer board,
+printable PDF packs, and CSV exports, and supports EJU, kata-judge/BJA-style, and
+IJF rulesets.
+
+- Judo Kata Judge (https://kata-judge.judowaza.org/) is an open-source (AGPL)
+  IJF-ruleset kata judging web app that stores data in Azure Cosmos DB (cloud).
+- Michel Kozlowski's Excel "Kata Scoresheets (EJU)"
+  (https://sites.google.com/site/katascoresheets/) is the spreadsheet many EJU
+  organisers use; this project follows it and is dedicated to his memory.
 
 ## Scoring
 

@@ -538,3 +538,35 @@ dialog.lightbox .lightbox-close:focus-visible {
   right: 15px;
   top: 15px;
 }
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table-wrap th,
+.table-wrap td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.table-wrap thead th {
+  border-bottom: 2px solid var(--line);
+}
+
+.table-wrap tbody th {
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}

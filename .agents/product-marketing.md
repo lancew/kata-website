@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v1
+**Document version:** v2
 **Last updated:** 2026-09-30
 
 ## Product Overview
@@ -56,7 +56,7 @@
 **Emotional tension:** Fear of getting official results wrong, of a system failing mid-event, and of switching away from a process everyone already knows.
 
 ## Competitive Landscape
-**Direct:** Other kata scoring software — _[confirm: are there known competitors?]_ — falls short because _[confirm]_.
+**Direct:** [Judo Kata Judge](https://kata-judge.judowaza.org/) (AGPL) — an IJF-ruleset judging web app built on an Azure cloud database; falls short because it assumes internet, is judging-only, and does not evidence draw, hall display, or printable packs. Vader Consulting's *Kata Manager* (MIT, C#/Windows) offers kata scorecards but is Windows-desktop only.
 
 **Secondary:** Michel Kozlowski's Excel "Kata Scoresheets (EJU)" — falls short because it is single-user, not live, and requires manual totals.
 
@@ -151,4 +151,5 @@
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v2 (2026-09-30) — Confirmed the direct competitive landscape (Judo Kata Judge, Vader Kata Manager) after competitor research; source data in `.agents/competitors/`.
 - v1 (2026-09-30) — Initial context auto-drafted from the website, README, llms.txt, and pricing.md; customer language, testimonials, direct competitors, and metrics still to confirm.

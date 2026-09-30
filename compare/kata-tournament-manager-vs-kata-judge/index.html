@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Lance Wicks" />
+    <meta name="copyright" content="Lance Wicks" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Judo Kata Tournament Manager" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="https://katajudo.com/og-image.png" />
+    <meta property="og:image:alt" content="Judo Kata Tournament Manager" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="621" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://katajudo.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Judo Kata Tournament Manager" />
+    <link rel="stylesheet" href="/css/almond.css" />
+    <link rel="stylesheet" href="/css/kata.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Kata Tournament Manager vs Judo Kata Judge</title>
+    <meta name="description" content="Judo Kata Tournament Manager vs Judo Kata Judge: an offline, all-in-one kata event system compared with an Azure-hosted IJF-ruleset judging app." />
+    <link rel="canonical" href="https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/" />
+    <meta property="og:url" content="https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/" />
+    <meta property="og:title" content="Kata Tournament Manager vs Judo Kata Judge" />
+    <meta property="og:description" content="Judo Kata Tournament Manager vs Judo Kata Judge: an offline, all-in-one kata event system compared with an Azure-hosted IJF-ruleset judging app." />
+    <meta name="twitter:title" content="Kata Tournament Manager vs Judo Kata Judge" />
+    <meta name="twitter:description" content="Judo Kata Tournament Manager vs Judo Kata Judge: an offline, all-in-one kata event system compared with an Azure-hosted IJF-ruleset judging app." />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://katajudo.com/#website",
+      "name": "Judo Kata Tournament Manager",
+      "url": "https://katajudo.com/",
+      "description": "Browser-based software to organise, score, and display judo kata competitions from one laptop on the local network.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://katajudo.com/#author"
+      },
+      "mainEntity": {
+        "@id": "https://katajudo.com/#app"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://katajudo.com/#author",
+      "name": "Lance Wicks",
+      "email": "lw@judocoach.com",
+      "url": "https://katajudo.com/about/",
+      "sameAs": [
+        "https://github.com/lancew",
+        "https://www.linkedin.com/in/lancew",
+        "https://perl.kiwi/typing"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://katajudo.com/#app",
+      "name": "Judo Kata Tournament Manager",
+      "url": "https://katajudo.com/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/#webpage",
+      "url": "https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/",
+      "name": "Kata Tournament Manager vs Judo Kata Judge",
+      "description": "Judo Kata Tournament Manager vs Judo Kata Judge: an offline, all-in-one kata event system compared with an Azure-hosted IJF-ruleset judging app.",
+      "isPartOf": {
+        "@id": "https://katajudo.com/#website"
+      },
+      "about": {
+        "@id": "https://katajudo.com/#app"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://katajudo.com/og-image.png"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://katajudo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compare",
+          "item": "https://katajudo.com/compare/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "vs Judo Kata Judge",
+          "item": "https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/#faq",
+      "url": "https://katajudo.com/compare/kata-tournament-manager-vs-kata-judge/",
+      "isPartOf": {
+        "@id": "https://katajudo.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between Judo Kata Tournament Manager and Judo Kata Judge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Judo Kata Judge is an IJF-ruleset judging web app built on an Azure cloud database. Judo Kata Tournament Manager is an all-in-one event system that runs offline on a laptop on the venue network, covering the draw, judge tablets, live hall results, and printable packs, with EJU, kata-judge/BJA-style, and IJF rulesets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Judo Kata Judge run without internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is designed around Azure Cosmos DB cloud storage, so it is not built for an offline venue LAN. Judo Kata Tournament Manager runs fully offline on the venue network."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are both free and open source?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, both are AGPL-licensed. Judo Kata Judge needs Azure resources to run, which have a running cost; Judo Kata Tournament Manager runs on a laptop with no running cost."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <p class="site-brand"><a href="/">Judo Kata Tournament Manager</a></p>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/scoring/">Scoring</a></li>
+          <li><a href="/on-site/">On-site</a></li>
+          <li><a href="/about/">About</a></li>
+          <li>
+            <a href="mailto:lw@judocoach.com?subject=Kata%20Tournament%20Manager%20demo">Book a demo</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li>
+            <a
+              href="/compare/kata-tournament-manager-vs-kata-judge/"
+              aria-current="page"
+              >vs Judo Kata Judge</a
+            >
+          </li>
+        </ol>
+      </nav>
+
+      <header class="hero">
+        <h1>Judo Kata Tournament Manager vs Judo Kata Judge</h1>
+        <p class="lede">
+          Both are free, open-source (AGPL) tools for judo kata. The real
+          difference is scope and where they run: one is an IJF-ruleset judging
+          app on a cloud database, the other is an all-in-one event system that
+          runs offline on a laptop.
+        </p>
+      </header>
+
+      <nav class="inpage-nav" aria-label="On this page">
+        <ul>
+          <li><a href="#tldr">TL;DR</a></li>
+          <li><a href="#table">At a glance</a></li>
+          <li><a href="#detail">In detail</a></li>
+          <li><a href="#who">Who each is for</a></li>
+          <li><a href="#faq-heading">Questions</a></li>
+        </ul>
+      </nav>
+
+      <section class="section" aria-labelledby="tldr">
+        <h2 id="tldr">TL;DR</h2>
+        <p>
+          <strong>Judo Kata Judge</strong> is a focused IJF kata judging web app
+          that stores its data in an Azure cloud database. <strong>Judo Kata
+          Tournament Manager</strong> runs an entire kata event — draw, judge
+          tablets, live hall results, printable packs — offline on a laptop. If
+          you only need IJF judging and can host on Azure, Judo Kata Judge is a
+          reasonable fit. If you need the whole event, offline, and EJU or
+          BJA-style scoring too, this is built for that.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="table">
+        <h2 id="table">At a glance</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">Judo Kata Tournament Manager</th>
+                <th scope="col">Judo Kata Judge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Focus</th>
+                <td>All-in-one kata event system</td>
+                <td>IJF-ruleset kata judging</td>
+              </tr>
+              <tr>
+                <th scope="row">Hosting</th>
+                <td>One laptop, offline LAN</td>
+                <td>Azure cloud (Cosmos DB)</td>
+              </tr>
+              <tr>
+                <th scope="row">Rulesets</th>
+                <td>EJU, kata-judge/BJA-style, IJF</td>
+                <td>IJF</td>
+              </tr>
+              <tr>
+                <th scope="row">Judge devices</th>
+                <td>Named tablet seats; submit/unsubmit, shadow seats</td>
+                <td>Judges score in the web app</td>
+              </tr>
+              <tr>
+                <th scope="row">Live hall display</th>
+                <td>Live results and announcer board</td>
+                <td>Not evidenced</td>
+              </tr>
+              <tr>
+                <th scope="row">Draw &amp; format</th>
+                <td>Automated draw, seeding, prelim-to-final, nationality policy</td>
+                <td>Not evidenced</td>
+              </tr>
+              <tr>
+                <th scope="row">Paperwork</th>
+                <td>PDF scoresheet packs and CSV exports</td>
+                <td>Spreadsheet (xlsx) export</td>
+              </tr>
+              <tr>
+                <th scope="row">Data</th>
+                <td>One SQLite file per event, organiser-owned</td>
+                <td>Azure Cosmos DB (cloud)</td>
+              </tr>
+              <tr>
+                <th scope="row">Licence</th>
+                <td>AGPL-3.0</td>
+                <td>AGPL-3.0</td>
+              </tr>
+              <tr>
+                <th scope="row">Running cost</th>
+                <td>None (optional paid services)</td>
+                <td>Free software + Azure costs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          Judo Kata Judge details are from its repository and site, reviewed
+          September 2026. “Not evidenced” means we could not confirm the feature
+          from its own sources — not that it is impossible. Check before you
+          decide.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="detail">
+        <h2 id="detail">In detail</h2>
+
+        <h3>Scope: judging app vs event system</h3>
+        <p>
+          Judo Kata Judge is about judging. Its data model is judges,
+          tournaments, and matches, and it scores to the IJF ruleset. Judo Kata
+          Tournament Manager covers the whole event: registering competitors and
+          judges, running the draw, seating panels, scoring on tablets,
+          displaying results, and producing the paperwork.
+        </p>
+        <p>
+          <strong>Bottom line:</strong> if you already have a process for the
+          draw and displays and only need judging, a focused app can be enough.
+          If you want to replace the spreadsheet <em>and</em> the manual
+          displays, you need the broader system.
+        </p>
+
+        <h3>Offline and venue networks</h3>
+        <p>
+          Judo Kata Judge stores data in Azure Cosmos DB, so it assumes internet
+          access and a cloud account. Judo Kata Tournament Manager runs entirely
+          on a laptop on the venue LAN, needs no account, and keeps each event in
+          a local SQLite file.
+        </p>
+        <p>
+          <strong>Bottom line:</strong> for venues with poor or no internet —
+          which is common — an offline system removes the biggest single risk.
+        </p>
+
+        <h3>Rulesets</h3>
+        <p>
+          Judo Kata Judge implements the IJF ruleset. Judo Kata Tournament
+          Manager implements EJU, kata-judge/BJA-style, and IJF, validated
+          against the senior categories of the 2024 Silesian Open Judo Kata
+          Competition.
+        </p>
+        <p>
+          <strong>Bottom line:</strong> if all your events are IJF, either
+          works. If you handle EJU or BJA-style events, the extra rulesets
+          matter.
+        </p>
+
+        <h3>Judge and hall experience</h3>
+        <p>
+          Both let judges score on a screen. Judo Kata Tournament Manager adds
+          named seats with immediate saving, submit and unsubmit, shadow seats,
+          and a mat clerk view, and it drives a live hall results screen and an
+          announcer board.
+        </p>
+        <p>
+          <strong>Bottom line:</strong> the hall display is the feature
+          organisers and spectators notice most.
+        </p>
+
+        <h3>Data and cost</h3>
+        <p>
+          Both are AGPL. Judo Kata Judge needs Azure resources, which carry a
+          running cost and a setup step; Judo Kata Tournament Manager runs on a
+          laptop at no cost, with paid on-site or hardware options if you want
+          someone to run it for you.
+        </p>
+        <p>
+          <strong>Bottom line:</strong> “free” software is not always free to
+          operate. Factor in the cloud account.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="who">
+        <h2 id="who">Who each is for</h2>
+        <div class="two-col">
+          <div>
+            <h3>Choose Judo Kata Tournament Manager if…</h3>
+            <ul>
+              <li>You want one offline system for the whole event</li>
+              <li>You need EJU or BJA-style scoring as well as IJF</li>
+              <li>You want live results and an announcer board for the hall</li>
+              <li>You want the organiser to own the data with no cloud account</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Choose Judo Kata Judge if…</h3>
+            <ul>
+              <li>You only need IJF-ruleset judging</li>
+              <li>You are happy hosting on Azure and managing the account</li>
+              <li>You already have the draw and displays covered elsewhere</li>
+              <li>You want a small, focused web app to self-host</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Questions</h2>
+        <details>
+          <summary>
+            What is the difference between Judo Kata Tournament Manager and Judo
+            Kata Judge?
+          </summary>
+          <p>
+            Judo Kata Judge is an IJF-ruleset judging web app built on an Azure
+            cloud database. Judo Kata Tournament Manager is an all-in-one event
+            system that runs offline on a laptop on the venue network, covering
+            the draw, judge tablets, live hall results, and printable packs,
+            with EJU, kata-judge/BJA-style, and IJF rulesets.
+          </p>
+        </details>
+        <details>
+          <summary>Can Judo Kata Judge run without internet?</summary>
+          <p>
+            It is designed around Azure Cosmos DB cloud storage, so it is not
+            built for an offline venue LAN. Judo Kata Tournament Manager runs
+            fully offline on the venue network.
+          </p>
+        </details>
+        <details>
+          <summary>Are both free and open source?</summary>
+          <p>
+            Yes, both are AGPL-licensed. Judo Kata Judge needs Azure resources
+            to run, which have a running cost; Judo Kata Tournament Manager runs
+            on a laptop with no running cost.
+          </p>
+        </details>
+        <p>
+          See also:
+          <a href="/alternatives/">all the kata scoring options compared</a> or
+          <a href="/alternatives/kata-scoresheets-excel/"
+            >moving on from Excel scoresheets</a
+          >.
+        </p>
+      </section>
+
+      <section class="section cta-panel" aria-labelledby="cta-heading">
+        <h2 id="cta-heading">See it running on your event</h2>
+        <p>
+          The software is free and open source (AGPL). Send your event date,
+          kata, and rough pair count and we’ll arrange a demo or a supervised
+          test event so you can judge it on the day, not on a feature list.
+        </p>
+        <p class="section-cta">
+          <a href="mailto:lw@judocoach.com?subject=Kata%20Tournament%20Manager%20demo">Email us to arrange a demo or test event</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/scoring/">Scoring</a></li>
+          <li><a href="/alternatives/">Alternatives</a></li>
+          <li><a href="/compare/">Compare</a></li>
+          <li><a href="/on-site/">On-site support</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+      <p>
+        © 2022–2026
+        <a href="/about/">Lance Wicks</a>
+        ·
+        <a href="mailto:lw@judocoach.com">lw@judocoach.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
