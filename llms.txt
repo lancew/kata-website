@@ -1,0 +1,57 @@
+# Judo Kata Tournament Manager
+
+> Browser-based software to organise, score, and display judo kata competitions from one laptop on a local network — draw, judge tablets, live hall results, and printable PDF scoresheets, with no internet required.
+
+Judo Kata Tournament Manager runs an entire judo kata competition from a single
+laptop acting as a local server. Judges score on tablets in the browser, organisers
+run the draw and manage the field, and the hall shows live results and an announcer
+board. It is built for kata organisers, judges, and competition officials. It is
+free and open source (AGPL-3.0) and works entirely offline on the venue's local
+network — no cloud service and no account.
+
+## Key facts
+
+- Free and open source (AGPL-3.0). No subscription, no per-event fee.
+- No internet required; runs on a laptop over the venue LAN.
+- Optional paid on-site operation and hardware supply are available.
+- Supports EJU, kata-judge/BJA-style, and IJF scoring rulesets.
+- Live screens in English, French, and German.
+- Data is a single SQLite file per event, owned by the organiser.
+- Validated against the senior categories of the 2024 Silesian Open Judo Kata Competition.
+- No public download yet; demos and supervised test events are open.
+
+## Pricing
+
+- Full pricing: https://katajudo.com/pricing.md
+- Software: free (£0, AGPL-3.0).
+- On-site support: £100 per day (including travel days), plus accommodation, meals, travel, and any hardware agreed in advance.
+- Posted kit: a pre-configured Raspberry Pi, quoted per event.
+- Full hardware supply: judge tablets, projector(s), server, and network, quoted on requirements.
+
+## Pages
+
+- Home: https://katajudo.com/
+- How an event runs: https://katajudo.com/how-it-works/
+- Scoring rulesets: https://katajudo.com/scoring/
+- On-site support: https://katajudo.com/on-site/
+- About: https://katajudo.com/about/
+
+## Scoring
+
+Choose one ruleset in Config; the same tablet marks produce the event total.
+- EJU: drops highest and lowest judge totals with three or more judges; a forgotten technique zeroes that technique and halves that judge's total once, rounded up.
+- kata-judge/BJA-style: discards per technique; scores stay between 1 and 10; halves without rounding up.
+- IJF: discards per technique; five judges drop high and low, four drop low, three or fewer keep every mark; a forgotten mark halves the pair total once.
+- Tie-breaks: fewer big mistakes, then medium, then small, then average score.
+- Shadow judge seats are stored but never counted.
+
+## Supported kata
+
+Nage-no-Kata (including 1G, 2G, 3G, 3-set), Katame-no-Kata (including 1G),
+Ju-no-Kata, Kime-no-Kata, Kodokan Goshin Jutsu, Koshiki-no-Kata,
+Itsutsu-no-Kata, and Kodomo-no-Kata 1–7.
+
+## Contact
+
+Lance Wicks — lw@judocoach.com
+Email your event date, kata, and rough pair count for a demo, test event, or quote.
